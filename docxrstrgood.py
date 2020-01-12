@@ -19,6 +19,9 @@ parser.add_option("-w", action="store_true", dest="b64w", default=False,
                   help="Make b64 regex optional wide strings... There is some stupidity here as regexp::assemble seems to eat nulls")
 parser.add_option("-r", dest="reass_pl_path", type="string",
                   help="Path to reass.pl script (regex assemble) requires libregexp-assemble-perl pkg.")
+parser.add_option("-b", action="store_true", dest="b", default=False,
+                  help="Disable regex start at word boundary. Likely you want this but sometimes you don't.")
+
 (options, args) = parser.parse_args()
 strings = options.input_target.split(",")
 
@@ -98,7 +101,10 @@ for s in strings:
     if options.i:
         sl = s.lower()
         su = s.upper()
-    regex = '\\b(?:'
+    if options.b:
+        regex = '(?:'
+    else:
+        regex = '\\b(?:'
     i = 0
     while i < len(s):
         if i == 0:
@@ -114,7 +120,7 @@ for s in strings:
                 hexregex += "|(?:{0}|{1})".format(su[0].encode('hex'), sl[0].encode('hex'))
         else:
             if sl[i] == su[i]:
-                regex += "[\\x22\\x27+,\\s&^_\\r\\n]*(?:(?:Chr[WB]?\\$?\\s*\\(+\\s*(?:Abs\\$?\\s*\\(+\\s*-?)?)?{0}(?:\.\d+)*?\\s*\\)*|{1}|{2}))".format(
+                regex += "[\\x22\\x27+,\\s&^_\\r\\n]*(?:(?:Chr[WB]?\\$?\\s*\\(+\\s*(?:Abs\\$?\\s*\\(+\\s*-?)?)?{0}(?:\.\d+)*?\\s*\\)*|{1}|{2})".format(
                     ord(s[i]), re.escape(s[i]), s[i].encode('hex'))
                 hexregex += "{0}".format(s[i].encode('hex'))
             else:
