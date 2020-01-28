@@ -45,3 +45,5 @@ TwinWave.EvilDoc.SongsInThewdKeyOfEmotet.20200124;Engine:81-255,Target:2;(0&1&2)
 TwinWave.EvilDoc.SongsInThewdKeyOfEmotetM2.20200124;Engine:81-255,Target:2;(0&1&((2|3)>2)&4);4174747269627574652056425f*436872*77646b6579::i;4765744f626a656374::i;22202b20::i;202b2022::i;0/(?-i)[a-z]+(?i)[\s_]+=[\s_]+\x22[^\x22]+[\x22][\s_]+[&+][\s_]+Chr[WB]?\$?\x28[^\x29]*wdkey[A-Za-z][^\x29]*\x29[\s_]+[&+][\s_]+\x22[^\x22]+\x22[\s_]+[&+][\s_]+(?-i)[A-Z][a-z]+\.[A-Z][a-z]+(?i)[\s_]+[&+][\s_]+\x22[^\x22]+\x22[\s_]*\n/s
 #TIIF https://youtu.be/4NRXx6U8ABQ?t=32
 TwinWave.EvilDoc.MathleteImpersonators.20200124;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;496d706572736f6e6174696f6e4c6576656c::i;1/ImpersonationLevel[\s_]*=[\s_]*-?\d+\s*(?:[\x2a\x2d\x2b\x2f\x5e\x25]|xor)[\s_]*-?\d+/si
+#https://www.youtube.com/watch?v=IKqV7DB8Iwg
+TwinWave.EvilDoc.CROCallsFunctionAndKeepsOnRunninRunnin;Engine:81-255,Target:2;(0&1);4174747269627574652056425f*536574*4372656174654f626a656374*2e72756e::i;0/Set[\s_]*(?P<var>[A-Za-z][A-Za-z0-9_-]*)[\s_]*=[\s_]*CreateObject[\s_]*\([\s_]*[A-Za-z][A-Za-z0-9_-]*\(.*?(?P=var)\.run\b/si
