@@ -128,6 +128,20 @@ for s in strings:
                     ord(sl[i]), ord(su[i]), re.escape(s[i]), sl[i].encode('hex'), su[i].encode('hex'))
                 hexregex += "(?:{0}|{1})".format(sl[i].encode('hex'), su[i].encode('hex'))
         i = i + 1
+
+        
+    try:
+        m=re.compile(regex)
+    except Exception as e:
+        print("Hold my beer lets try to fix this")
+        regex = regex + ")"
+    try:
+        m = re.compile(regex)
+        print("fixed it")
+    except:
+        print("Will is probably an idiot, unable to make a regex that compiles properly")
+        sys.exit(1)
+
     if su[0] == sl[0]:
         print('TwinWave.EvilDoc.DOCXSTRGOOD.{0}.{1};Engine:81-255,Target:2;(0&(1|2|3|4|5|6)&7);0:417474726962757465205642::i;{2}::i;{3}::i;{4}::i;{5}::i;{6}::i;{7};(1|2|3|4|5|6)/{8}/si'.format(
             s.upper().replace(';', ''), dstamp, s[0].encode('hex').encode('hex'),
