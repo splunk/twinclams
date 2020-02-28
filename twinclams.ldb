@@ -108,3 +108,5 @@ TwinWave.EvilDoc.OLEObjectSTOMP.20200227;Engine:81-255,Target:2;(0&1&2);0:417474
 TwinWave.EvilDoc.BeyondDaSea.20200227;Engine:81-255,Target:2;(0&1);0:4174747269627574652056425f::i;73656120302c2076624e756c6c537472696e672c206a7375332c2076624e756c6c537472696e672c2076624e756c6c537472696e672c2030::i
 #https://www.youtube.com/watch?v=ormQQG2UhtQ e9440a5d2dfe2453ae5b69a9c096f8d4cf9e059d469c5de67380d76e02dd6975
 Twinwave.EvilDoc.ShellSymbolConCatHairEveryWhere.20200227;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;5368656c6c::i;1/shell\b(?:[\x22\x27]?[\s_]*\])?[\x21\x23\x25\x26\x2A\x2B\x2D\x3A\x3B\x3C\x3E\x3F\x40\x5B\x2F\x5D\x5F\x7B\x7C\x7D\x7E][\s_]*\x28?[\s_][^\r\n]*\s[&+]\s[^\r\n]*\s[&+]\s[^\r\n]*\s[&+]\s[^\r\n]*\s[&+]/si
+#https://www.youtube.com/watch?v=hTWKbfoikeg
+TwinWave.EvilDoc.ShellsLikeUrsnifSpirit.20200228;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;2e4974656d28292e446f63756d656e742e4170706c69636174696f6e2e5368656c6c45786563757465::i;0/\.Item\(\)\.Document\.Application\.ShellExecute[\s_]*[A-Za-z][A-Za-z0-9_-]*[\s_]*,[\s_]*[A-Za-z][A-Za-z0-9_-]*[\s_]+[&+][\s_]*[A-Za-z]/si
