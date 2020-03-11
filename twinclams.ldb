@@ -209,3 +209,8 @@ TwinWave.EvilDoc.Excel4Macro.IknowHimWellFromChess.20200310;Engine:81-255,Target
 #4b3dcf0ca171e93c464c384294784e0041ca8dd81958a648cadaedfd77199035  9659d353571224c84e3b08c1f41c24db8e14a70ed458b45273d21897efd9ad78  d75e57a70c55b1b3d09a4ae19d77f6af6db4a98a755c8e57959fde83802bc8f7
 TwinWave.EvilDoc.ShellMathWindowZeroToHero.20200310;Engine:81-255,Target:2;(0&(1|2)&3);0:4174747269627574652056425f::i;2e72756e::i;7368656c6c::i;(1|2)/(?:\.run|Shell)(?:[^\r\n]*?(?: _\s*\r?\n)*?)*,[\s_]*?0[\s_]*?\*[\s_]*?\d+(?:[^\r\n]*?(?: _\s*\r?\n)*)*?\)?[\s_]*\n/is
 TwinWave.EvilDoc.ShellMathWindowZeroToHero.M2.20200310;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;4765744f626a656374*4172726179::i;1/GetObject\([A-Za-z][A-Za-z0-9_-]*\x28(?:[^\r\n]*?(?: _\s*\r?\n)*?)*Array\((?:[\s_]*?\d+,){20}/si
+#4daf1f057fb07090d760ae527f7401ad7224a27881824c714743ac29450add84
+#https://www.youtube.com/watch?v=8sxB7EN1pzg&t=1077s
+TwinWave.EvilRTF.AdversarialMethodSheets.202020311;Engine:81-255,Target:0;(0&(1=0)&2&3);0:7B5C7274;5c6f626a*457863656c2e5368656574::aw;5c6f626a::aw;2/\\obj.*?E(?-i)(?!xcel\.Sheet)(?i)\x00*x\x00*c\x00*e\x00*l\x00*\.\x00*S\x00*h\x00*e\x00*e\x00*t\x00*\./i
+#https://www.youtube.com/watch?v=8sxB7EN1pzg&t=2378s
+TwinWave.EvilRTF.SpaceBetweenObjNakatomiPlaza.20200311;Engine:81-255,Target:0;(0&1&2);0:7B5C7274;5c6f626a656374*5c6f626a757064617465*5c6f626a656d62::i;1/\\object(?=[\x20\t\x00]*?\r\n)(?:(?=[\x00\t\r\n]*?\x20)|(?=[\x00\x20\r\n]*?\t))[\x00\s]+\\objupdate(?=[\x20\t\x00]*?\r\n)(?:(?=[\x00\t\r\n]*?\x20)|(?=[\x00\x20\r\n]*?\t))[\x00\s]+\\objemb/si
