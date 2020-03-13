@@ -211,6 +211,8 @@ TwinWave.EvilDoc.ShellMathWindowZeroToHero.20200310;Engine:81-255,Target:2;(0&(1
 TwinWave.EvilDoc.ShellMathWindowZeroToHero.M2.20200310;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;4765744f626a656374*4172726179::i;1/GetObject\([A-Za-z][A-Za-z0-9_-]*\x28(?:[^\r\n]*?(?: _\s*\r?\n)*?)*Array\((?:[\s_]*?\d+,){20}/si
 #4daf1f057fb07090d760ae527f7401ad7224a27881824c714743ac29450add84
 #https://www.youtube.com/watch?v=8sxB7EN1pzg&t=1077s
-TwinWave.EvilRTF.AdversarialMethodSheets.202020311;Engine:81-255,Target:0;(0&(1=0)&2&3);0:7B5C7274;5c6f626a*457863656c2e5368656574::aw;5c6f626a::aw;2/\\obj.*?E(?-i)(?!xcel\.Sheet)(?i)\x00*x\x00*c\x00*e\x00*l\x00*\.\x00*S\x00*h\x00*e\x00*e\x00*t\x00*\./i
+TwinWave.EvilRTF.AdversarialMethodSheets.202020311;Engine:81-255,Target:0;(0&(1=0)&2&3);0:7B5C7274;5c6f626a*457863656c2e5368656574::aw;5c6f626a::aw;2/\\obj.*?E(?-i)(?!xcel\.Sheet)(?i)[\x00\s]*x[\x00\s]*c[\x00\s]*e[\x00\s]*l[\x00\s]*\.[\x00\s]*S[\x00\s]*h[\x00\s]*e[\x00\s]*e[\x00\s]*t[\s\x00]*\./i
 #https://www.youtube.com/watch?v=8sxB7EN1pzg&t=2378s
 TwinWave.EvilRTF.SpaceBetweenObjNakatomiPlaza.20200311;Engine:81-255,Target:0;(0&1&2);0:7B5C7274;5c6f626a656374*5c6f626a757064617465*5c6f626a656d62::i;1/\\object(?=[\x20\t\x00]*?\r\n)(?:(?=[\x00\t\r\n]*?\x20)|(?=[\x00\x20\r\n]*?\t))[\x00\s]+\\objupdate(?=[\x20\t\x00]*?\r\n)(?:(?=[\x00\t\r\n]*?\x20)|(?=[\x00\x20\r\n]*?\t))[\x00\s]+\\objemb/si
+#https://www.youtube.com/watch?v=L5V9nK7-OkM
+TwinWave.EvilDoc.SubFuncArgToExecGreenRiver.20200313;Engine:81-255,Target:2;(0&1&(2|3)&(4|5|6)&7);0:4174747269627574652056425f::i;4372656174654f626a656374::i;46756e6374696f6e::i;537562::i;45786563::i;437265617465::i;52756e::i;(2|3)/(?:Function|Sub)[\s_]+(?P<var1>[A-Z][a-z0-9_-]*)[^\r\n]*?(?P<var2>[A-Z][a-z0-9_-]*)[\s_]+As[\s_]+String.*?set[\s_]+(?P<var3>[A-Z][a-z0-9_-]*?)[\s_]*=[\s_]*CreateObject.*?\.(?:exec|run|create)\b(?:[^\r\n]*?(?: _\s*\r?\n)*?)*\b(?P=var2)\b.*?\b(?P=var1)[\s_]*=/si
