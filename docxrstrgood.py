@@ -21,14 +21,23 @@ parser.add_option("-r", dest="reass_pl_path", type="string",
                   help="Path to reass.pl script (regex assemble) requires libregexp-assemble-perl pkg.")
 parser.add_option("-b", action="store_true", dest="b", default=False,
                   help="Disable regex start at word boundary. Likely you want this but sometimes you don't.")
+parser.add_option("-z", action="store_true", dest="z", default=False,
+                  help="reverse the input string")
+parser.add_option("-x", action="store_true", dest="x", default=False,
+                  help="don't do base64 strings")
 
 (options, args) = parser.parse_args()
-strings = options.input_target.split(",")
-
-
+strings = []
 if not options.input_target:
     print("You gotta tell me what hurts before I can fix it. Give me some input with -t")
     sys.exit(1)
+
+if options.z:
+    tmp_strings = options.input_target.split(",")
+    for entry in tmp_strings:
+        strings.append(entry[::-1])
+else:
+    strings = options.input_target.split(",") 
 
 if not options.reass_pl_path or not os.path.exists(options.reass_pl_path):
     print('Point me to the Regex RX script "reass.pl" script included with this file. Also for this to work you need libregexp-assemble-perl')
@@ -133,26 +142,50 @@ for s in strings:
     try:
         m=re.compile(regex)
     except Exception as e:
-        print("Hold my beer lets try to fix this")
+        #print("Hold my beer lets try to fix this")
         regex = regex + ")"
     try:
         m = re.compile(regex)
-        print("fixed it")
+        #print("fixed it")
     except:
         print("Will is probably an idiot, unable to make a regex that compiles properly")
         sys.exit(1)
-
-    if su[0] == sl[0]:
-        print('TwinWave.EvilDoc.DOCXSTRGOOD.{0}.{1};Engine:81-255,Target:2;(0&(1|2|3|4|5|6)&7);0:417474726962757465205642::i;{2}::i;{3}::i;{4}::i;{5}::i;{6}::i;{7};(1|2|3|4|5|6)/{8}/si'.format(
-            s.upper().replace(';', ''), dstamp, s[0].encode('hex').encode('hex'),
-            s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
-            "chr".encode('hex'), str(ord(s[0])).encode('hex'), regex))
+    if not options.z:
+        if su[0] == sl[0]:
+            print('TwinWave.EvilDoc.DOCXSTRGOOD.{0}.{1};Engine:81-255,Target:2;(0&(1|2|3|4|5|6)&7);0:417474726962757465205642::i;{2}::i;{3}::i;{4}::i;{5}::i;{6}::i;{7};(1|2|3|4|5|6)/{8}/si'.format(
+                s.upper().replace(';', ''), dstamp, s[0].encode('hex').encode('hex'),
+                s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
+                "chr".encode('hex'), str(ord(s[0])).encode('hex'), regex))
+        else:
+            print('TwinWave.EvilDoc.DOCXRSTRGOOD.{0}.{1};Engine:81-255,Target:2;(0&(1|2|3|4|5|6|7|8)&9);0:417474726962757465205642::i;{2}::i;{3}::i;{4}::i;{5}::i;{6}::i;{7}::i;{8};{9};(1|2|3|4|5|6|7|8)/{10}/si'.format(
+                s.upper().replace(';', ''), dstamp, sl[0].encode('hex').encode('hex'), su[0].encode('hex').encode('hex'),
+                s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
+                str(ord(sl[0])).encode('hex'), str(ord(su[0])).encode('hex'), "chr".encode('hex'), regex))
     else:
-        print('TwinWave.EvilDoc.DOCXRSTRGOOD.{0}.{1};Engine:81-255,Target:2;(0&(1|2|3|4|5|6|7|8)&9);0:417474726962757465205642::i;{2}::i;{3}::i;{4}::i;{5}::i;{6}::i;{7}::i;{8};{9};(1|2|3|4|5|6|7|8)/{10}/si'.format(
-            s.upper().replace(';', ''), dstamp, sl[0].encode('hex').encode('hex'), su[0].encode('hex').encode('hex'),
-            s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
-            str(ord(sl[0])).encode('hex'), str(ord(su[0])).encode('hex'), "chr".encode('hex'), regex))
-
+        if options.b:
+            if su[0] == sl[0]:
+                print('TwinWave.EvilDoc.DOCXSTRGOOD.{0}.{1};Engine:81-255,Target:2;(((0&1)|(0&(2|3|4|5|6|7)&8)));0:417474726962757465205642::i;{2}::i;{3}::i;{4}::i;{5}::i;{6}::i;{7}::i;{8};(2|3|4|5|6|7)/{9}/si'.format(
+                    s.upper().replace(';', '')[::-1] + ".REV", dstamp, s.encode('hex'),s[0].encode('hex').encode('hex'),
+                    s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
+                    "chr".encode('hex'), str(ord(s[0])).encode('hex'), regex))
+            else:
+                print('TwinWave.EvilDoc.DOCXRSTRGOOD.{0}.{1};Engine:81-255,Target:2;(((0&1)|(0&(2|3|4|5|6|7|8|9)&10)));0:417474726962757465205642::i;{2}::i;{3}::i;{4}::i;{5}::i;{6}::i;{7}::i;{8}::i;{9};{10};(2|3|4|5|6|7|8|9)/{11}/si'.format(
+                    s.upper().replace(';', '')[::-1] + ".REV", dstamp, sl.encode('hex'),sl[0].encode('hex').encode('hex'), su[0].encode('hex').encode('hex'),
+                    s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
+                    str(ord(sl[0])).encode('hex'), str(ord(su[0])).encode('hex'), "chr".encode('hex'), regex))                  
+        else:            
+            if su[0] == sl[0]:
+                print('TwinWave.EvilDoc.DOCXSTRGOOD.{0}.{1};Engine:81-255,Target:2;(((0&1)|(0&(2|3|4|5|6|7)&8)));0:417474726962757465205642::i;(B){2}::i;(B){3}::i;(B){4}::i;(B){5}::i;(B){6}::i;(B){7}::i;(B){8};(2|3|4|5|6|7)/{9}/si'.format(
+                    s.upper().replace(';', '')[::-1] + ".REV", dstamp, s.encode('hex'),s[0].encode('hex').encode('hex'),
+                    s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
+                    "chr".encode('hex'), str(ord(s[0])).encode('hex'), regex))
+            else:
+                print('TwinWave.EvilDoc.DOCXRSTRGOOD.{0}.{1};Engine:81-255,Target:2;(((0&1)|(0&(2|3|4|5|6|7|8|9)&10)));0:417474726962757465205642::i;(B){2}::i;(B){3}::i;(B){4}::i;(B){5}::i;(B){6}::i;(B){7}::i;(B){8}::i;(B){9};(B){10};(2|3|4|5|6|7|8|9)/{11}/si'.format(
+                    s.upper().replace(';', '')[::-1] + ".REV", dstamp, sl.encode('hex'),sl[0].encode('hex').encode('hex'), su[0].encode('hex').encode('hex'),
+                    s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
+                    str(ord(sl[0])).encode('hex'), str(ord(su[0])).encode('hex'), "chr".encode('hex'), regex))            
+    if options.x:
+        continue 
     if options.i:
         smap = map(''.join, itertools.product(*((c.upper(), c.lower()) for c in s)))
     else:
