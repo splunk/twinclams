@@ -3,6 +3,7 @@ import datetime
 currentDT = datetime.datetime.now()
 dstamp = currentDT.strftime("%y%m%d")
 from optparse import OptionParser
+from collections import OrderedDict
 import subprocess
 import os, base64, difflib
 import sys
@@ -25,6 +26,8 @@ parser.add_option("-z", action="store_true", dest="z", default=False,
                   help="reverse the input string")
 parser.add_option("-x", action="store_true", dest="x", default=False,
                   help="don't do base64 strings")
+parser.add_option("-e", action="store_true", dest="e", default=False,
+                  help="generate char'd excel4 macro matches in any order")
 
 (options, args) = parser.parse_args()
 strings = []
@@ -38,10 +41,10 @@ if options.z:
         strings.append(entry[::-1])
 else:
     strings = options.input_target.split(",") 
-
-if not options.reass_pl_path or not os.path.exists(options.reass_pl_path):
-    print('Point me to the Regex RX script "reass.pl" script included with this file. Also for this to work you need libregexp-assemble-perl')
-    sys.exit(1)
+if not options.e:
+    if not options.reass_pl_path or not os.path.exists(options.reass_pl_path):
+        print('Point me to the Regex RX script "reass.pl" script included with this file. Also for this to work you need libregexp-assemble-perl')
+        sys.exit(1)
 
 def prGreen(prt): print("\033[92m {}\033[00m".format(prt))
 
@@ -103,6 +106,58 @@ def b64u(encode):
     encode = ude(encode)
     return base64.b64encode(encode)
 
+
+if options.e:
+    matches = OrderedDict() 
+    for s in strings:
+        sl = s
+        su = s
+        if options.i:
+            sl = s.lower()
+            su = s.upper()
+        i = 0
+        while i < len(s):
+            if sl[i] == su[i]:
+                match = "1E{0}00416F00".format(sl[i].encode('hex'))
+                if match not in matches:
+                    matches[match] = {}
+                    matches[match]['cnt']=0
+                    matches[match]['alt']="416F0007020400010000{0}".format(sl[i].encode('hex'))
+                else:
+                    matches[match]['cnt'] = matches[match]['cnt'] + 1
+            else:
+                match = "1E({0}|{1})00416F00".format(sl[i].encode('hex'),su[i].encode('hex'))
+                if match not in matches:
+                    matches[match] = {}
+                    matches[match]['cnt']=0
+                    matches[match]['alt']="416F0007020400010000({0}|{1})".format(sl[i].encode('hex'),su[i].encode('hex'))
+                else:
+                    matches[match]['cnt'] = matches[match]['cnt'] + 1
+            i = i + 1
+        rulep1='TwinWave.EvilDoc.DOCXSTRGOOD.AOEX4.BITSNEEDEDFOR.{0}.{1};Engine:81-255,Target:2;((0|1|2)&(3|('.format(s.upper().replace(';', '').replace(' ',''), dstamp)
+        rulep2='8500{6}0201{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0101{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0001{1-8192}18001700200000010700000000000000000000013A::aw'
+        if options.i:
+            rulep2 = rulep2 + ";{0}::awi".format(s.encode('hex'))
+        else:
+            rulep2 = rulep2 + ";{0}::aw".format(s.encode('hex'))
+        cnt = 4
+        for entry in matches:
+            if matches[entry]['cnt'] > 0:
+                if cnt == 4:
+                    rulep1=rulep1 + '(({0}|{1})>{2})'.format(cnt,cnt+1,matches[entry]['cnt'])
+                else:
+                    rulep1=rulep1 + '&(({0}|{1})>{2})'.format(cnt,cnt+1,matches[entry]['cnt'])                    
+            else:
+                if cnt == 4:
+                    rulep1=rulep1 + '({0}|{1})'.format(cnt,cnt+1)
+                else:
+                    rulep1=rulep1 + '&({0}|{1})'.format(cnt,cnt+1)
+
+            rulep2 = rulep2 + ";{0};{1}".format(entry,matches[entry]['alt'])    
+            cnt = cnt + 2
+        rulep1 = rulep1 + ')));'
+        print(rulep1 + rulep2)
+    sys.exit(0)
 
 for s in strings:
     sl = s
