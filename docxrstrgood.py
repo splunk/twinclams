@@ -134,7 +134,7 @@ if options.e:
                 else:
                     matches[match]['cnt'] = matches[match]['cnt'] + 1
             i = i + 1
-        rulep1='TwinWave.EvilDoc.DOCXSTRGOOD.AOEX4.BITSNEEDEDFOR.{0}.{1};Engine:81-255,Target:2;((0|1|2)&(3|('.format(s.upper().replace(';', '').replace(' ',''), dstamp)
+        rulep1='TwinWave.EvilDoc.DOCXSTRGOOD.AOEX4.BITSNEEDEDFOR.{0}.{1};Engine:81-255,Target:2;((0|1|2)&(3|('.format(s.upper().replace(';', '').replace(' ','SPCE'), dstamp)
         rulep2='8500{6}0201{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0101{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0001{1-8192}18001700200000010700000000000000000000013A::aw'
         if options.i:
             rulep2 = rulep2 + ";{0}::awi".format(s.encode('hex'))
@@ -208,12 +208,12 @@ for s in strings:
     if not options.z:
         if su[0] == sl[0]:
             print('TwinWave.EvilDoc.DOCXSTRGOOD.{0}.{1};Engine:81-255,Target:2;(0&(1|2|3|4|5|6)&7);0:417474726962757465205642::i;{2}::i;{3}::i;{4}::i;{5}::i;{6}::i;{7};(1|2|3|4|5|6)/{8}/si'.format(
-                s.upper().replace(';', ''), dstamp, s[0].encode('hex').encode('hex'),
+                s.upper().replace(';', '').replace(' ',"SPCE"), dstamp, s[0].encode('hex').encode('hex'),
                 s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
                 "chr".encode('hex'), str(ord(s[0])).encode('hex'), regex))
         else:
             print('TwinWave.EvilDoc.DOCXRSTRGOOD.{0}.{1};Engine:81-255,Target:2;(0&(1|2|3|4|5|6|7|8)&9);0:417474726962757465205642::i;{2}::i;{3}::i;{4}::i;{5}::i;{6}::i;{7}::i;{8};{9};(1|2|3|4|5|6|7|8)/{10}/si'.format(
-                s.upper().replace(';', ''), dstamp, sl[0].encode('hex').encode('hex'), su[0].encode('hex').encode('hex'),
+                s.upper().replace(';', '').replace(' ',"SPCE"), dstamp, sl[0].encode('hex').encode('hex'), su[0].encode('hex').encode('hex'),
                 s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
                 str(ord(sl[0])).encode('hex'), str(ord(su[0])).encode('hex'), "chr".encode('hex'), regex))
     else:
@@ -287,7 +287,7 @@ for s in strings:
     for entry in prefix_dict:
         if len(prefix_dict[entry]) == 1:
             print('TwinWave.EvilDoc.DOCXRSTRGOOD.{0}.{1}B64.{2};Engine:81-255,Target:0;((0|(1&(2|3))|(4&(5|6)))&7);0:417474726962757465205642::i;0:D0CF11E0A1B11AE1;5c564245372e444c4c::aw;5c564245362e444c4c::aw;0,1:3c3f786d6c;2f7061636b6167652f323030362f6d657461646174612f636f72652d70726f70657274696573::i;2f6f6666696365446f63756d656e742f323030362f657874656e6465642d70726f70657274696573::i;{3}::aw'.format(
-                s.upper().replace(';', ''), dstamp, i, prefix_dict[entry][0].encode('hex')))
+                s.upper().replace(';', '').replace(' ','SPCE'), dstamp, i, prefix_dict[entry][0].encode('hex')))
         else:
             prefix_list.append(entry)
             f = open('scratch.txt', 'w')
@@ -299,5 +299,5 @@ for s in strings:
             f.close()
             c, out, err = cmd_wrapper("{0} scratch.txt".format(options.reass_pl_path))
             print('TwinWave.EvilDoc.DOCXRSTRGOOD.{0}.{1}B64.{2};Engine:81-255,Target:0;((0|(1&(2|3))|(4&(5|6)))&7&8);0:417474726962757465205642::i;0:D0CF11E0A1B11AE1;5c564245372e444c4c::aw;5c564245362e444c4c::aw;0,1:3c3f786d6c;2f7061636b6167652f323030362f6d657461646174612f636f72652d70726f70657274696573::i;2f6f6666696365446f63756d656e742f323030362f657874656e6465642d70726f70657274696573::i;{3}::aw;7/{4}/'.format(
-                s.upper().replace(';', ''), dstamp, i, entry.encode('hex'), out.strip().replace("\?", "\\x00?")))
+                s.upper().replace(';', '').replace(' ','SPCE'), dstamp, i, entry.encode('hex'), out.strip().replace("\?", "\\x00?")))
         i = i + 1
