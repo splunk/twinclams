@@ -28,7 +28,8 @@ parser.add_option("-x", action="store_true", dest="x", default=False,
                   help="don't do base64 strings")
 parser.add_option("-e", action="store_true", dest="e", default=False,
                   help="generate char'd excel4 macro matches in any order")
-
+parser.add_option("-s", dest="s", type="int", default=1,
+                  help="sep between obfuscated frag matches defaults to 0,1 providing an int will make it 0,n")
 (options, args) = parser.parse_args()
 strings = []
 if not options.input_target:
@@ -184,12 +185,12 @@ for s in strings:
                 hexregex += "|(?:{0}|{1})".format(su[0].encode('hex'), sl[0].encode('hex'))
         else:
             if sl[i] == su[i]:
-                regex += "[\\x22\\x27+,\\s&^_\\r\\n]*(?:(?:Chr[WB]?\\$?\\s*\\(+\\s*(?:Abs\\$?\\s*\\(+\\s*-?)?)?{0}(?:\.\d+)*?\\s*\\)*|{1}|{2})".format(
-                    ord(s[i]), re.escape(s[i]), s[i].encode('hex'))
+                regex += "[\\x22\\x27+,\\s&^_\\r\\n]*.{{0,{3}}}(?:(?:Chr[WB]?\\$?\\s*\\(+\\s*(?:Abs\\$?\\s*\\(+\\s*-?)?)?{0}(?:\.\d+)*?\\s*\\)*|{1}|{2})".format(
+                    ord(s[i]), re.escape(s[i]), s[i].encode('hex'),options.s)
                 hexregex += "{0}".format(s[i].encode('hex'))
             else:
-                regex += "[\\x22\\x27+,\\s&^_\\r\\n]*(?:(?:Chr[WB]?\\$?\\s*\\(*\\s*(?:Abs\\$?\\s*\\(+\\s*-?)?)?(?:{0}|{1})(?:\.\d+)*?\\s*\\)*|{2}|(?:{3}|{4}))".format(
-                    ord(sl[i]), ord(su[i]), re.escape(s[i]), sl[i].encode('hex'), su[i].encode('hex'))
+                regex += "[\\x22\\x27+,\\s&^_\\r\\n]*.{{0,{5}}}(?:(?:Chr[WB]?\\$?\\s*\\(*\\s*(?:Abs\\$?\\s*\\(+\\s*-?)?)?(?:{0}|{1})(?:\.\d+)*?\\s*\\)*|{2}|(?:{3}|{4}))".format(
+                    ord(sl[i]), ord(su[i]), re.escape(s[i]), sl[i].encode('hex'), su[i].encode('hex'),options.s)
                 hexregex += "(?:{0}|{1})".format(sl[i].encode('hex'), su[i].encode('hex'))
         i = i + 1
 
