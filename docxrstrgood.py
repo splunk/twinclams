@@ -124,6 +124,7 @@ if options.e:
                     matches[match] = {}
                     matches[match]['cnt']=0
                     matches[match]['alt']="416F0007020400010000{0}".format(sl[i].encode('hex'))
+                    matches[match]['alt2']="C0????6f000844{0}".format(sl[i].encode('hex'))
                 else:
                     matches[match]['cnt'] = matches[match]['cnt'] + 1
             else:
@@ -132,6 +133,7 @@ if options.e:
                     matches[match] = {}
                     matches[match]['cnt']=0
                     matches[match]['alt']="416F0007020400010000({0}|{1})".format(sl[i].encode('hex'),su[i].encode('hex'))
+                    matches[match]['alt2']="C0????6f000844({0}|{1})".format(sl[i].encode('hex'),su[i].encode('hex'))
                 else:
                     matches[match]['cnt'] = matches[match]['cnt'] + 1
             i = i + 1
@@ -143,19 +145,19 @@ if options.e:
             rulep2 = rulep2 + ";{0}::aw".format(s.encode('hex'))
         cnt = 4
         for entry in matches:
-            if matches[entry]['cnt'] > 0:
-                if cnt == 4:
-                    rulep1=rulep1 + '(({0}|{1})>{2})'.format(cnt,cnt+1,matches[entry]['cnt'])
-                else:
-                    rulep1=rulep1 + '&(({0}|{1})>{2})'.format(cnt,cnt+1,matches[entry]['cnt'])                    
+            #if matches[entry]['cnt'] > 0:
+            #    if cnt == 4:
+            #        rulep1=rulep1 + '(({0}|{1})>{2})'.format(cnt,cnt+1,matches[entry]['cnt'])
+            #    else:
+            #        rulep1=rulep1 + '&(({0}|{1})>{2})'.format(cnt,cnt+1,matches[entry]['cnt'])                    
+            #else:
+            if cnt == 4:
+                rulep1=rulep1 + '({0}|{1}|{2})'.format(cnt,cnt+1,cnt+2)
             else:
-                if cnt == 4:
-                    rulep1=rulep1 + '({0}|{1})'.format(cnt,cnt+1)
-                else:
-                    rulep1=rulep1 + '&({0}|{1})'.format(cnt,cnt+1)
+                rulep1=rulep1 + '&({0}|{1}|{2})'.format(cnt,cnt+1,cnt+2)
 
-            rulep2 = rulep2 + ";{0};{1}".format(entry,matches[entry]['alt'])    
-            cnt = cnt + 2
+            rulep2 = rulep2 + ";{0};{1};{2}".format(entry,matches[entry]['alt'],matches[entry]['alt2'])    
+            cnt = cnt + 3 
         rulep1 = rulep1 + ')));'
         print(rulep1 + rulep2)
     sys.exit(0)
