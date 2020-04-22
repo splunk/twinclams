@@ -30,6 +30,10 @@ parser.add_option("-e", action="store_true", dest="e", default=False,
                   help="generate char'd excel4 macro matches in any order")
 parser.add_option("-s", dest="s", type="int", default=1,
                   help="sep between obfuscated frag matches defaults to 0,1 providing an int will make it 0,n")
+parser.add_option("-a", action="store_true", dest="a", default=False,
+                  help="Generate rtf matches from input string using a because the rtf file format is an asshole and r was already taken. Always case insensitive")
+parser.add_option("-n", action="store_true", dest="n", default=False,
+                  help="Add a match for Not target string.. Only used in RTF currently.")                  
 (options, args) = parser.parse_args()
 strings = []
 if not options.input_target:
@@ -137,7 +141,7 @@ if options.e:
                 else:
                     matches[match]['cnt'] = matches[match]['cnt'] + 1
             i = i + 1
-        rulep1='TwinWave.EvilDoc.DOCXSTRGOOD.AOEX4.BITSNEEDEDFOR.{0}.{1};Engine:81-255,Target:2;((0|1|2)&(3|('.format(s.upper().replace(';', '').replace(' ','SPCE'), dstamp)
+        rulep1='TwinWave.EvilDoc.DOCXSTRGOOD.AOEX4.BITSNEEDEDFOR.{0}.{1};Engine:81-255,Target:2;((0|1|2)&(3|('.format(re.sub('[^0-9a-zA-Z]+', '_', s).upper(), dstamp)
         rulep2='8500{6}0201{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0101{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0001{1-8192}18001700200000010700000000000000000000013A::aw'
         if options.i:
             rulep2 = rulep2 + ";{0}::awi".format(s.encode('hex'))
@@ -160,6 +164,63 @@ if options.e:
             cnt = cnt + 3 
         rulep1 = rulep1 + ')));'
         print(rulep1 + rulep2)
+    sys.exit(0)
+
+if options.a:
+    for s in strings:
+        s = s.decode('string_escape') 
+        regexstr = ''
+        rulep1=''
+        matches = []
+        have_anchor = False
+        sl = s.lower()
+        su = s.upper()
+        i = 0
+        while i < len(s):
+            if sl[i] == su[i]:
+                matches.append("{0}".format(sl[i].encode('hex').encode('hex')))
+                if options.s > 1:
+                    if i == 0:
+                        regexstr = sl[i].encode('hex') + "(?![A-Fa-f0-9]{{{0}}})(?=[A-Fa-f0-9]{{0,{1}}}[\\x7b\\x7d%+\\x2f\\x5c\\s\\x27-])".format(len(s.encode('hex')) - 2,len(s.encode('hex')) - 2)
+                    else:
+                        regexstr = regexstr + ".{{0,{0}}}?".format(options.s) + sl[i].encode('hex')
+                have_anchor = True
+            else:                
+                matches.append("({0}|{1})".format(sl[i].encode('hex').encode('hex'),su[i].encode('hex').encode('hex')))
+                if options.s > 1:
+                    if i == 0:
+                        regexstr = "(?![A-Fa-f0-9]{{{0}}})(?=[A-Fa-f0-9]{{0,{1}}}[\\x7b\\x7d%+\\x2f\\x5c\\s\\x27-])".format(len(s.encode('hex')) - 2,len(s.encode('hex')) - 2) + "(?:{0}|{1})".format(sl[i].encode('hex'),su[i].encode('hex'))
+                    else:
+                        regexstr = regexstr + ".{{0,{0}}}?".format(options.s) + "(?:{0}|{1})".format(sl[i].encode('hex'),su[i].encode('hex'))
+            i = i + 1         
+        if options.s > 1:
+            f2 = open('scratch.txt', 'wb')
+            f2.write("{0}\n".format(regexstr))
+            f2.close()
+            c, out, err = cmd_wrapper("{0} scratch.txt".format(options.reass_pl_path))            
+            #Not perfect requires 2 byte anchor for regex to anchor against
+            if options.n:
+                if su[0] == sl[0]:
+                    rulep1='TwinWave.EvilDoc.DOCXSTRGOOD.RTFSTR.{0}.{1};Engine:81-255,Target:0;(0&1=0&2&3);0:7B5C7274;{2}::i;5C6F626A656374*{3}::i;2/{4}/si'.format(re.sub('[^0-9a-zA-Z]+', '_', s).upper(), dstamp,s.encode('hex').encode('hex'),sl[0].encode('hex').encode('hex'),out.strip())
+                else:   
+                    rulep1='TwinWave.EvilDoc.DOCXSTRGOOD.RTFSTR.{0}.{1};Engine:81-255,Target:0;(0&1=0&(2|3)&4);0:7B5C7274;{2}::i;5C6F626A656374*{3}::i;5C6F626A656374*{4}::i;(2|3)/{5}/si'.format(re.sub('[^0-9a-zA-Z]+', '_', s).upper(), dstamp,s.encode('hex').encode('hex'),sl[0].encode('hex').encode('hex'),su[0].encode('hex').encode('hex'),out.strip())
+            else:
+                if su[0] == sl[0]:
+                    rulep1='TwinWave.EvilDoc.DOCXSTRGOOD.RTFSTR.{0}.{1};Engine:81-255,Target:0;(0&1&2);0:7B5C7274;5C6F626A656374*{2}::i;1/{3}/si'.format(re.sub('[^0-9a-zA-Z]+', '_', s).upper(), dstamp,sl[0].encode('hex').encode('hex'),out.strip())
+                else:                     
+                    rulep1='TwinWave.EvilDoc.DOCXSTRGOOD.RTFSTR.{0}.{1};Engine:81-255,Target:0;(0&(1|2)&3);0:7B5C7274;5C6F626A656374*{2}::i;5C6F626A656374*{3}::i::(2|3)/{4}/si'.format(re.sub('[^0-9a-zA-Z]+', '_', s).upper(), dstamp,sl[0].encode('hex').encode('hex'),su[0].encode('hex').encode('hex'),out.strip())
+        elif have_anchor:
+            if options.n:
+                 rulep1='TwinWave.EvilDoc.DOCXSTRGOOD.RTFSTR.{0}.{1};Engine:81-255,Target:0;(0&1&2=0&3);0:7B5C7274;5C6F626A656374::i;{2}::i;{3}::i'.format(re.sub('[^0-9a-zA-Z]+', '_', s).upper(), dstamp,s.encode('hex').encode('hex'),''.join(matches))
+            else:
+                 rulep1='TwinWave.EvilDoc.DOCXSTRGOOD.RTFSTR.{0}.{1};Engine:81-255,Target:0;(0&1&2);0:7B5C7274;5C6F626A656374::i;{2}::i'.format(re.sub('[^0-9a-zA-Z]+', '_', s).upper(), dstamp,''.join(matches))    
+        else:
+            if options.n:
+                rulep1='TwinWave.EvilDoc.DOCXSTRGOOD.RTFSTR.{0}.{1};Engine:81-255,Target:0;(0&1&2=0&(3|4));0:7B5C7274;5C6F626A656374::i;{2}::i;{3}{4}::i;{5}{6}::i'.format(re.sub('[^0-9a-zA-Z]+', '_', s).upper(), dstamp,s.encode('hex').encode('hex'),sl[0].encode('hex').encode('hex'),''.join(matches[1:]),su[0].encode('hex').encode('hex'),''.join(matches[1:]))
+            else:    
+                rulep1='TwinWave.EvilDoc.DOCXSTRGOOD.RTFSTR.{0}.{1};Engine:81-255,Target:0;(0&1&(2|3));0:7B5C7274;5C6F626A656374::i;{2}{3}::i;{4}{5}::i'.format(re.sub('[^0-9a-zA-Z]+', '_', s).upper(), dstamp,sl[0].encode('hex').encode('hex'),''.join(matches[1:]),su[0].encode('hex').encode('hex'),''.join(matches[1:]))
+
+        print(rulep1)
     sys.exit(0)
 
 for s in strings:
@@ -290,7 +351,7 @@ for s in strings:
     for entry in prefix_dict:
         if len(prefix_dict[entry]) == 1:
             print('TwinWave.EvilDoc.DOCXRSTRGOOD.{0}.{1}B64.{2};Engine:81-255,Target:0;((0|(1&(2|3))|(4&(5|6)))&7);0:417474726962757465205642::i;0:D0CF11E0A1B11AE1;5c564245372e444c4c::aw;5c564245362e444c4c::aw;0,1:3c3f786d6c;2f7061636b6167652f323030362f6d657461646174612f636f72652d70726f70657274696573::i;2f6f6666696365446f63756d656e742f323030362f657874656e6465642d70726f70657274696573::i;{3}::aw'.format(
-                s.upper().replace(';', '').replace(' ','SPCE'), dstamp, i, prefix_dict[entry][0].encode('hex')))
+                re.sub('[^0-9a-zA-Z]+', '_', s).upper(), dstamp, i, prefix_dict[entry][0].encode('hex')))
         else:
             prefix_list.append(entry)
             f = open('scratch.txt', 'w')
@@ -302,5 +363,5 @@ for s in strings:
             f.close()
             c, out, err = cmd_wrapper("{0} scratch.txt".format(options.reass_pl_path))
             print('TwinWave.EvilDoc.DOCXRSTRGOOD.{0}.{1}B64.{2};Engine:81-255,Target:0;((0|(1&(2|3))|(4&(5|6)))&7&8);0:417474726962757465205642::i;0:D0CF11E0A1B11AE1;5c564245372e444c4c::aw;5c564245362e444c4c::aw;0,1:3c3f786d6c;2f7061636b6167652f323030362f6d657461646174612f636f72652d70726f70657274696573::i;2f6f6666696365446f63756d656e742f323030362f657874656e6465642d70726f70657274696573::i;{3}::aw;7/{4}/'.format(
-                s.upper().replace(';', '').replace(' ','SPCE'), dstamp, i, entry.encode('hex'), out.strip().replace("\?", "\\x00?")))
+                re.sub('[^0-9a-zA-Z]+', '_', s).upper(), dstamp, i, entry.encode('hex'), out.strip().replace("\?", "\\x00?")))
         i = i + 1
