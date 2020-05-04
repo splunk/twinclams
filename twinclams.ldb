@@ -491,3 +491,4 @@ TwinWave.EvilDoc.DLrFireMapleSong.20200501;Engine:81-255,Target:2;(0&1&2&3&(4|5)
 #https://blog.malwarelab.pl/posts/on_the_royal_road/
 #https://www.youtube.com/watch?v=uB1D9wWxd2w
 TwinWave.EvilDoc.RoyalRoadsLeadToReturnOfTheMAK.2000501;Engine:81-255,Target:0;(0&(1|2|3));0:7B5C7274;5F83C7??33C966B9????66833F??74??668137????4747E2;354638334337????3333433936364239????????363638333346????3734????363638313337????????343734374532::i;356638336337????3333633936366239????????363638333366????3734????363638313337????????343734376532::i
+TwinWave.EvilDoc.DridexNumberOne.20200504;Engine:81-255,Target:2;(0&1&2&3&4&(5|6)&(7|8)&9);0:4174747269627574652056425f::i;466f722045616368::i;44656275672e7072696e74::i;5f4c61796f757428::i;5f436c69636b28::i;3a20*4372656174654f626a656374::i;3a3d*4372656174654f626a656374::i;2e52756e::i;2e45786563::i;(5|6)/\x3a[^\r\n]*=[^\r\n]*CreateObject[^\r\n]*\.(Run|Exec(?:ute)?)\b/
