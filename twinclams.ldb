@@ -499,3 +499,5 @@ TwinWave.EvilDoc.PtrtoPlowed.20200507;Engine:81-255,Target:2;(0&1&2&3);0:4174747
 TwinWave.EvilDoc.SquiblyDoobyDOWhereAreYou.20200507;Engine:81-255,Target:2;((0|1|2)&3&4);564245372e646c6c::awi;564245362e646c6c::awi;0:4174747269627574652056425f::i;5265475376523332::awi;5343724f626a2e444c6c::awi
 #https://www.youtube.com/watch?v=nKhN1t_7PEY
 TwinWave.EvilDoc.DridexBrokenWings.20200508;Engine:81-255,Target:2;(0&(1|2)&(3|4)&5&6);0:4174747269627574652056425f::i;2e72756e::i;2e65786563::i;3a20*4372656174654f626a656374::i;3a3d*4372656174654f626a656374::i;(3|4)/\x3a[^\r\n]*=[^\r\n]*&[\s_]*CreateObject/si;575363726970742e51756974::i
+#https://www.youtube.com/watch?v=Y21VecIIdBI
+TwinWave.EvilDoc.URLDownloaderSuperStar.20200510;Engine:81-255,Target:2;(0&(1|2)&(3|4)&5&6);0:4174747269627574652056425f::i;5368656c6c45786563757465::i;7368656c6c33322e646c6c::i;55524c446f776e6c6f6164546f46696c65::i;75726c6d6f6e2e646c6c::i;666f72*746f*436872*6e657874::i;5/for\b(?:(?!(?:next)).)+?[&+][\s_]*?chr.*?(?:[\x2a\x2d\x2b\x2f\x5e\x25]|xor)(?:(?!(?:next)).)+?\bnext/si
