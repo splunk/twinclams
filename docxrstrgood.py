@@ -33,7 +33,10 @@ parser.add_option("-s", dest="s", type="int", default=1,
 parser.add_option("-a", action="store_true", dest="a", default=False,
                   help="Generate rtf matches from input string using a because the rtf file format is an asshole and r was already taken. Always case insensitive")
 parser.add_option("-n", action="store_true", dest="n", default=False,
-                  help="Add a match for Not target string.. Only used in RTF currently.")                  
+                  help="Add a match for Not target string.. Only used in RTF currently.")                 
+parser.add_option("-c", action="store_true", dest="c", default=False,
+                  help="Generate single byte xor versions of the input string")
+
 (options, args) = parser.parse_args()
 strings = []
 if not options.input_target:
@@ -111,6 +114,11 @@ def b64u(encode):
     encode = ude(encode)
     return base64.b64encode(encode)
 
+def single_char_xor(input_bytes, char_value):
+    output_bytes = ''
+    for byte in input_bytes:
+        output_bytes += chr(ord(byte) ^ char_value)
+    return output_bytes
 
 if options.e:
     matches = OrderedDict() 
@@ -189,7 +197,7 @@ if options.a:
                 matches.append("({0}|{1})".format(sl[i].encode('hex').encode('hex'),su[i].encode('hex').encode('hex')))
                 if options.s > 1:
                     if i == 0:
-                        regexstr = "(?![A-Fa-f0-9]{{{0}}})(?=[A-Fa-f0-9]{{0,{1}}}[\\x7b\\x7d%+\\x2f\\x5c\\s\\x27-])".format(len(s.encode('hex')) - 2,len(s.encode('hex')) - 2) + "(?:{0}|{1})".format(sl[i].encode('hex'),su[i].encode('hex'))
+                        regexstr =  "(?:{0}|{1})".format(sl[i].encode('hex'),su[i].encode('hex')) + "(?![A-Fa-f0-9]{{{0}}})(?=[A-Fa-f0-9]{{0,{1}}}[\\x7b\\x7d%+\\x2f\\x5c\\s\\x27-])".format(len(s.encode('hex')) - 2,len(s.encode('hex')) - 2) 
                     else:
                         regexstr = regexstr + ".{{0,{0}}}?".format(options.s) + "(?:{0}|{1})".format(sl[i].encode('hex'),su[i].encode('hex'))
             i = i + 1         
@@ -223,92 +231,103 @@ if options.a:
         print(rulep1)
     sys.exit(0)
 
+xor_strings = []
+if options.c and len(strings) == 1:
+    for i in range(1,256):
+        xorval=single_char_xor(strings[0],i)
+        print('TwinWave.EvilDoc.DOCXRSTRGOOD.{0}.{1}XOR.{2};Engine:81-255,Target:0;((0|(1&(2|3))|(4&(5|6)))&7);0:417474726962757465205642::i;0:D0CF11E0A1B11AE1;5c564245372e444c4c::aw;5c564245362e444c4c::aw;0,1:3c3f786d6c;2f7061636b6167652f323030362f6d657461646174612f636f72652d70726f70657274696573::i;2f6f6666696365446f63756d656e742f323030362f657874656e6465642d70726f70657274696573::i;{3}::aw'.format(
+                re.sub('[^0-9a-zA-Z]+', '_', strings[0]).upper(), dstamp, i, xorval.encode('hex')))
+        xor_strings.append(xorval)
 for s in strings:
-    sl = s
-    su = s
-    if options.i:
-        sl = s.lower()
-        su = s.upper()
-    if options.b:
-        regex = '(?:'
-    else:
-        regex = '\\b(?:'
-    i = 0
-    while i < len(s):
-        if i == 0:
-            hexregex = ''
-            regex += "(?:" + re.escape(s[0]) + "(?!" + re.escape(s[1:])
-            if sl[0] == su[0]:
-                regex += ")|(?:Chr[WB]?\\$?\\s*\\(+\\s*(?:Abs\\$?\\s*\\(+\\s*-?)?)?{0}(?:\.\d+)*?\\s*\\)*)|{1})".format(
-                    ord(s[0]), s[0].encode('hex'))
-                hexregex += "|{0}".format(s[0].encode('hex'))
-            else:
-                regex += ")|(?:Chr[WB]?\\$?\\s*\\(*\\s*(?:Abs\\$?\\s*\\(+\\s*-?)?)?(?:{0}|{1})(?:\.\d+)*?\\s*\\)*|(?:{2}|{3}))".format(
-                    ord(sl[0]), ord(su[0]), su[0].encode('hex'), sl[0].encode('hex'))
-                hexregex += "|(?:{0}|{1})".format(su[0].encode('hex'), sl[0].encode('hex'))
+    if not options.c:    
+        sl = s
+        su = s
+        if options.i:
+            sl = s.lower()
+            su = s.upper()
+        if options.b:
+            regex = '(?:'
         else:
-            if sl[i] == su[i]:
-                regex += "[\\x22\\x27+,\\s&^_\\r\\n]*.{{0,{3}}}(?:(?:Chr[WB]?\\$?\\s*\\(+\\s*(?:Abs\\$?\\s*\\(+\\s*-?)?)?{0}(?:\.\d+)*?\\s*\\)*|{1}|{2})".format(
-                    ord(s[i]), re.escape(s[i]), s[i].encode('hex'),options.s)
-                hexregex += "{0}".format(s[i].encode('hex'))
+            regex = '\\b(?:'
+        i = 0
+        while i < len(s):
+            if i == 0:
+                hexregex = ''
+                regex += "(?:" + re.escape(s[0]) + "(?!" + re.escape(s[1:])
+                if sl[0] == su[0]:
+                    regex += ")|(?:Chr[WB]?\\$?\\s*\\(+\\s*(?:Abs\\$?\\s*\\(+\\s*-?)?)?{0}(?:\.\d+)*?\\s*\\)*)|{1})".format(
+                        ord(s[0]), s[0].encode('hex'))
+                    hexregex += "|{0}".format(s[0].encode('hex'))
+                else:
+                    regex += ")|(?:Chr[WB]?\\$?\\s*\\(*\\s*(?:Abs\\$?\\s*\\(+\\s*-?)?)?(?:{0}|{1})(?:\.\d+)*?\\s*\\)*|(?:{2}|{3}))".format(
+                        ord(sl[0]), ord(su[0]), su[0].encode('hex'), sl[0].encode('hex'))
+                    hexregex += "|(?:{0}|{1})".format(su[0].encode('hex'), sl[0].encode('hex'))
             else:
-                regex += "[\\x22\\x27+,\\s&^_\\r\\n]*.{{0,{5}}}(?:(?:Chr[WB]?\\$?\\s*\\(*\\s*(?:Abs\\$?\\s*\\(+\\s*-?)?)?(?:{0}|{1})(?:\.\d+)*?\\s*\\)*|{2}|(?:{3}|{4}))".format(
-                    ord(sl[i]), ord(su[i]), re.escape(s[i]), sl[i].encode('hex'), su[i].encode('hex'),options.s)
-                hexregex += "(?:{0}|{1})".format(sl[i].encode('hex'), su[i].encode('hex'))
-        i = i + 1
+                if sl[i] == su[i]:
+                    regex += "[\\x22\\x27+,\\s&^_\\r\\n]*.{{0,{3}}}(?:(?:Chr[WB]?\\$?\\s*\\(+\\s*(?:Abs\\$?\\s*\\(+\\s*-?)?)?{0}(?:\.\d+)*?\\s*\\)*|{1}|{2})".format(
+                        ord(s[i]), re.escape(s[i]), s[i].encode('hex'),options.s)
+                    hexregex += "{0}".format(s[i].encode('hex'))
+                else:
+                    regex += "[\\x22\\x27+,\\s&^_\\r\\n]*.{{0,{5}}}(?:(?:Chr[WB]?\\$?\\s*\\(*\\s*(?:Abs\\$?\\s*\\(+\\s*-?)?)?(?:{0}|{1})(?:\.\d+)*?\\s*\\)*|{2}|(?:{3}|{4}))".format(
+                        ord(sl[i]), ord(su[i]), re.escape(s[i]), sl[i].encode('hex'), su[i].encode('hex'),options.s)
+                    hexregex += "(?:{0}|{1})".format(sl[i].encode('hex'), su[i].encode('hex'))
+            i = i + 1
 
         
-    try:
-        m=re.compile(regex)
-    except Exception as e:
-        #print("Hold my beer lets try to fix this")
-        regex = regex + ")"
-    try:
-        m = re.compile(regex)
-        #print("fixed it")
-    except:
-        print("Will is probably an idiot, unable to make a regex that compiles properly")
-        sys.exit(1)
-    if not options.z:
-        if su[0] == sl[0]:
-            print('TwinWave.EvilDoc.DOCXSTRGOOD.{0}.{1};Engine:81-255,Target:2;(0&(1|2|3|4|5|6)&7);0:417474726962757465205642::i;{2}::i;{3}::i;{4}::i;{5}::i;{6}::i;{7};(1|2|3|4|5|6)/{8}/si'.format(
-                s.upper().replace(';', '').replace(' ',"SPCE"), dstamp, s[0].encode('hex').encode('hex'),
-                s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
-                "chr".encode('hex'), str(ord(s[0])).encode('hex'), regex))
+        try:
+            m=re.compile(regex)
+        except Exception as e:
+            #print("Hold my beer lets try to fix this")
+            regex = regex + ")"
+        try:
+            m = re.compile(regex)
+            #print("fixed it")
+        except:
+            print("Will is probably an idiot, unable to make a regex that compiles properly")
+            sys.exit(1)
+
+        if not options.z:
+            if su[0] == sl[0]:
+                print('TwinWave.EvilDoc.DOCXSTRGOOD.{0}.{1};Engine:81-255,Target:2;(0&(1|2|3|4|5|6)&7);0:417474726962757465205642::i;{2}::i;{3}::i;{4}::i;{5}::i;{6}::i;{7};(1|2|3|4|5|6)/{8}/si'.format(
+                    s.upper().replace(';', '').replace(' ',"SPCE"), dstamp, s[0].encode('hex').encode('hex'),
+                    s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
+                    "chr".encode('hex'), str(ord(s[0])).encode('hex'), regex))
+            else:
+                print('TwinWave.EvilDoc.DOCXRSTRGOOD.{0}.{1};Engine:81-255,Target:2;(0&(1|2|3|4|5|6|7|8)&9);0:417474726962757465205642::i;{2}::i;{3}::i;{4}::i;{5}::i;{6}::i;{7}::i;{8};{9};(1|2|3|4|5|6|7|8)/{10}/si'.format(
+                    s.upper().replace(';', '').replace(' ',"SPCE"), dstamp, sl[0].encode('hex').encode('hex'), su[0].encode('hex').encode('hex'),
+                    s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
+                    str(ord(sl[0])).encode('hex'), str(ord(su[0])).encode('hex'), "chr".encode('hex'), regex))
         else:
-            print('TwinWave.EvilDoc.DOCXRSTRGOOD.{0}.{1};Engine:81-255,Target:2;(0&(1|2|3|4|5|6|7|8)&9);0:417474726962757465205642::i;{2}::i;{3}::i;{4}::i;{5}::i;{6}::i;{7}::i;{8};{9};(1|2|3|4|5|6|7|8)/{10}/si'.format(
-                s.upper().replace(';', '').replace(' ',"SPCE"), dstamp, sl[0].encode('hex').encode('hex'), su[0].encode('hex').encode('hex'),
-                s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
-                str(ord(sl[0])).encode('hex'), str(ord(su[0])).encode('hex'), "chr".encode('hex'), regex))
-    else:
-        if options.b:
-            if su[0] == sl[0]:
-                print('TwinWave.EvilDoc.DOCXSTRGOOD.{0}.{1};Engine:81-255,Target:2;(((0&1)|(0&(2|3|4|5|6|7)&8)));0:417474726962757465205642::i;{2}::i;{3}::i;{4}::i;{5}::i;{6}::i;{7}::i;{8};(2|3|4|5|6|7)/{9}/si'.format(
-                    s.upper().replace(';', '')[::-1] + ".REV", dstamp, s.encode('hex'),s[0].encode('hex').encode('hex'),
-                    s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
-                    "chr".encode('hex'), str(ord(s[0])).encode('hex'), regex))
-            else:
-                print('TwinWave.EvilDoc.DOCXRSTRGOOD.{0}.{1};Engine:81-255,Target:2;(((0&1)|(0&(2|3|4|5|6|7|8|9)&10)));0:417474726962757465205642::i;{2}::i;{3}::i;{4}::i;{5}::i;{6}::i;{7}::i;{8}::i;{9};{10};(2|3|4|5|6|7|8|9)/{11}/si'.format(
-                    s.upper().replace(';', '')[::-1] + ".REV", dstamp, sl.encode('hex'),sl[0].encode('hex').encode('hex'), su[0].encode('hex').encode('hex'),
-                    s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
-                    str(ord(sl[0])).encode('hex'), str(ord(su[0])).encode('hex'), "chr".encode('hex'), regex))                  
-        else:            
-            if su[0] == sl[0]:
-                print('TwinWave.EvilDoc.DOCXSTRGOOD.{0}.{1};Engine:81-255,Target:2;(((0&1)|(0&(2|3|4|5|6|7)&8)));0:417474726962757465205642::i;(B){2}::i;(B){3}::i;(B){4}::i;(B){5}::i;(B){6}::i;(B){7}::i;(B){8};(2|3|4|5|6|7)/{9}/si'.format(
-                    s.upper().replace(';', '')[::-1] + ".REV", dstamp, s.encode('hex'),s[0].encode('hex').encode('hex'),
-                    s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
-                    "chr".encode('hex'), str(ord(s[0])).encode('hex'), regex))
-            else:
-                print('TwinWave.EvilDoc.DOCXRSTRGOOD.{0}.{1};Engine:81-255,Target:2;(((0&1)|(0&(2|3|4|5|6|7|8|9)&10)));0:417474726962757465205642::i;(B){2}::i;(B){3}::i;(B){4}::i;(B){5}::i;(B){6}::i;(B){7}::i;(B){8}::i;(B){9};(B){10};(2|3|4|5|6|7|8|9)/{11}/si'.format(
-                    s.upper().replace(';', '')[::-1] + ".REV", dstamp, sl.encode('hex'),sl[0].encode('hex').encode('hex'), su[0].encode('hex').encode('hex'),
-                    s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
-                    str(ord(sl[0])).encode('hex'), str(ord(su[0])).encode('hex'), "chr".encode('hex'), regex))            
+            if options.b:
+                if su[0] == sl[0]:
+                    print('TwinWave.EvilDoc.DOCXSTRGOOD.{0}.{1};Engine:81-255,Target:2;(((0&1)|(0&(2|3|4|5|6|7)&8)));0:417474726962757465205642::i;{2}::i;{3}::i;{4}::i;{5}::i;{6}::i;{7}::i;{8};(2|3|4|5|6|7)/{9}/si'.format(
+                        s.upper().replace(';', '')[::-1] + ".REV", dstamp, s.encode('hex'),s[0].encode('hex').encode('hex'),
+                        s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
+                        "chr".encode('hex'), str(ord(s[0])).encode('hex'), regex))
+                else:
+                    print('TwinWave.EvilDoc.DOCXRSTRGOOD.{0}.{1};Engine:81-255,Target:2;(((0&1)|(0&(2|3|4|5|6|7|8|9)&10)));0:417474726962757465205642::i;{2}::i;{3}::i;{4}::i;{5}::i;{6}::i;{7}::i;{8}::i;{9};{10};(2|3|4|5|6|7|8|9)/{11}/si'.format(
+                        s.upper().replace(';', '')[::-1] + ".REV", dstamp, sl.encode('hex'),sl[0].encode('hex').encode('hex'), su[0].encode('hex').encode('hex'),
+                        s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
+                        str(ord(sl[0])).encode('hex'), str(ord(su[0])).encode('hex'), "chr".encode('hex'), regex))                  
+            else:            
+                if su[0] == sl[0]:
+                    print('TwinWave.EvilDoc.DOCXSTRGOOD.{0}.{1};Engine:81-255,Target:2;(((0&1)|(0&(2|3|4|5|6|7)&8)));0:417474726962757465205642::i;(B){2}::i;(B){3}::i;(B){4}::i;(B){5}::i;(B){6}::i;(B){7}::i;(B){8};(2|3|4|5|6|7)/{9}/si'.format(
+                        s.upper().replace(';', '')[::-1] + ".REV", dstamp, s.encode('hex'),s[0].encode('hex').encode('hex'),
+                        s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
+                        "chr".encode('hex'), str(ord(s[0])).encode('hex'), regex))
+                else:
+                    print('TwinWave.EvilDoc.DOCXRSTRGOOD.{0}.{1};Engine:81-255,Target:2;(((0&1)|(0&(2|3|4|5|6|7|8|9)&10)));0:417474726962757465205642::i;(B){2}::i;(B){3}::i;(B){4}::i;(B){5}::i;(B){6}::i;(B){7}::i;(B){8}::i;(B){9};(B){10};(2|3|4|5|6|7|8|9)/{11}/si'.format(
+                        s.upper().replace(';', '')[::-1] + ".REV", dstamp, sl.encode('hex'),sl[0].encode('hex').encode('hex'), su[0].encode('hex').encode('hex'),
+                        s[0].encode('hex') + s[1].encode('hex'), (s[0] + '\x27').encode('hex'), (s[0] + '\x22').encode('hex'),
+                        str(ord(sl[0])).encode('hex'), str(ord(su[0])).encode('hex'), "chr".encode('hex'), regex))            
     if options.x:
         continue 
     if options.i:
         smap = map(''.join, itertools.product(*((c.upper(), c.lower()) for c in s)))
     else:
         smap = [s]
+    if options.c:
+        smap.extend(xor_strings)
     hexstrings = []
     nstrings = []
     prefix_dict = {}
