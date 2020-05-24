@@ -122,6 +122,9 @@ def single_char_xor(input_bytes, char_value):
 
 if options.e:
     matches = OrderedDict() 
+    matches_chardv1 = []
+    matches_chardv2 = []
+    matches_chardv3 = []
     for s in strings:
         sl = s
         su = s
@@ -130,6 +133,7 @@ if options.e:
             su = s.upper()
         i = 0
         while i < len(s):
+            match = ""
             if sl[i] == su[i]:
                 match = "1E{0}00416F00".format(sl[i].encode('hex'))
                 if match not in matches:
@@ -148,14 +152,18 @@ if options.e:
                     matches[match]['alt2']="C0????6f000844({0}|{1})".format(sl[i].encode('hex'),su[i].encode('hex'))
                 else:
                     matches[match]['cnt'] = matches[match]['cnt'] + 1
+            matches_chardv1.append(match)
+            matches_chardv2.append(matches[match]['alt'])
+            matches_chardv3.append(matches[match]['alt2'])
+
             i = i + 1
-        rulep1='TwinWave.EvilDoc.DOCXSTRGOOD.AOEX4.BITSNEEDEDFOR.{0}.{1};Engine:81-255,Target:2;((0|1|2)&(3|('.format(re.sub('[^0-9a-zA-Z]+', '_', s).upper(), dstamp)
-        rulep2='8500{6}0201{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0101{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0001{1-8192}18001700200000010700000000000000000000013A::aw'
+        rulep1='TwinWave.EvilDoc.DOCXSTRGOOD.AOEX4.BITSNEEDEDFOR.{0}.{1};Engine:81-255,Target:2;((0|1|2|((3|4|5)&6))&(7|('.format(re.sub('[^0-9a-zA-Z]+', '_', s).upper(), dstamp)
+        rulep2='8500{6}0201{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0101{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0001{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0201;8500{6}0101;8500{6}0001;457863656C20342E30204D6163726F73::aw'
         if options.i:
             rulep2 = rulep2 + ";{0}::awi".format(s.encode('hex'))
         else:
             rulep2 = rulep2 + ";{0}::aw".format(s.encode('hex'))
-        cnt = 4
+        cnt = 8
         for entry in matches:
             #if matches[entry]['cnt'] > 0:
             #    if cnt == 4:
@@ -163,7 +171,7 @@ if options.e:
             #    else:
             #        rulep1=rulep1 + '&(({0}|{1})>{2})'.format(cnt,cnt+1,matches[entry]['cnt'])                    
             #else:
-            if cnt == 4:
+            if cnt == 8:
                 rulep1=rulep1 + '({0}|{1}|{2})'.format(cnt,cnt+1,cnt+2)
             else:
                 rulep1=rulep1 + '&({0}|{1}|{2})'.format(cnt,cnt+1,cnt+2)
@@ -171,6 +179,18 @@ if options.e:
             rulep2 = rulep2 + ";{0};{1};{2}".format(entry,matches[entry]['alt'],matches[entry]['alt2'])    
             cnt = cnt + 3 
         rulep1 = rulep1 + ')));'
+        print(rulep1 + rulep2)
+        rulep1 = 'TwinWave.EvilDoc.DOCXSTRGOOD.AOEX4.{0}.LOVECATS.{1};Engine:81-255,Target:2;((0|1|2|((3|4|5)&6))&7);'.format(re.sub('[^0-9a-zA-Z]+', '_', s).upper(), dstamp)
+        rulep2 = '8500{6}0201{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0101{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0001{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0201;8500{6}0101;8500{6}0001;457863656C20342E30204D6163726F73::aw;'
+        rulep2 = rulep2 + "{{0-{0}}}".format(options.s).join(matches_chardv1)
+        print(rulep1 + rulep2)
+        rulep1 = 'TwinWave.EvilDoc.DOCXSTRGOOD.AOEX4.{0}.LOVECATSALT.{1};Engine:81-255,Target:2;((0|1|2|((3|4|5)&6))&7);'.format(re.sub('[^0-9a-zA-Z]+', '_', s).upper(), dstamp)
+        rulep2 = '8500{6}0201{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0101{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0001{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0201;8500{6}0101;8500{6}0001;457863656C20342E30204D6163726F73::aw;'        
+        rulep2 = rulep2 + "{{0-{0}}}".format(options.s).join(matches_chardv2)
+        print(rulep1 + rulep2)
+        rulep1 = 'TwinWave.EvilDoc.DOCXSTRGOOD.AOEX4.{0}.LOVECATSALT2.{1};Engine:81-255,Target:2;((0|1|2|((3|4|5)&6))&7);'.format(re.sub('[^0-9a-zA-Z]+', '_', s).upper(), dstamp)
+        rulep2 = '8500{6}0201{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0101{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0001{1-8192}18001700200000010700000000000000000000013A::aw;8500{6}0201;8500{6}0101;8500{6}0001;457863656C20342E30204D6163726F73::aw;'        
+        rulep2 = rulep2 + "{{0-{0}}}".format(options.s).join(matches_chardv3)
         print(rulep1 + rulep2)
     sys.exit(0)
 
