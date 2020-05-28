@@ -369,6 +369,17 @@ for s in strings:
                     init_string1 = longest(init_string1, init_string2)
                 hexstrings.append(init_string1[::-1].encode("hex"))
                 nstrings.append(init_string1)
+                init_string1 = b64u(string_to_encode + os.urandom(t))  # initialize first string
+                for i in range(100):
+                    init_string2 = b64u(string_to_encode + os.urandom(t))
+                    init_string1 = longest(init_string1, init_string2)
+                for entry in nstrings:
+                    #takes care of leading null issue
+                    if init_string1 in entry:
+                        hexstrings.remove(entry[::-1].encode("hex"))
+                        nstrings.remove(entry)
+                hexstrings.append(init_string1[::-1].encode("hex"))
+                nstrings.append(init_string1)                
 
     nstrings2 = []
     nstrings = list(set(nstrings))
