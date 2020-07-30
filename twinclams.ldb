@@ -774,3 +774,5 @@ TwinWave.EvilDoc.VBACROLetsDoTheTimeWarpAgain.20200726;Engine:81-255,Target:2;(0
 TwinWave.EvilDOCPPTDLRWhiteLotus20200720;Engine:81-255,Target:2;(0&(1|(2&3)));0:4174747269627574652056425f::i;3a2f2f253230253230406a2e6d702f::i;226d22*227322*226822*227422*226122::i;2/\x22m\x22[\s_]+[^\r\n]+=[\s_]+\x22s\x22[^\r\n]+=[\s_]+\x22h\x22[^\r\n]+=[\s_]+\x22t\x22[^\r\n]+=[\s_]+\x22a\x22/si
 #https://www.youtube.com/watch?v=rog8ou-ZepE
 TwinWave.EvilDoc.VanillaIceIceIDBaby.20200720;Engine:81-255,Target:2;(0&(1=0&2=0)&3&(4|5));0:4174747269627574652056425f::i;4957736852756e74696d654c696272617279::i;777363726970742e7368656c6c::i;4173204e6577205773685368656c6c::i;2e72756e::i;2e65786563::i
+#https://www.youtube.com/watch?v=pXu_vFuQFf0
+TwinWave.EvilDoc.CROFurtherDownTheObfusSpiral.20200729;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;536574*4372656174654f626a656374::i;1/Set[\s_]*?(?P<var>[A-Za-z][A-Za-z0-9\x2e_-]*)[\s_]*=[\s_]*CreateObject[\s_]*\([\s_]*[A-Za-z].*?=[\s_]*\b(?P=var)\([\s_]*[A-Za-z]/is
