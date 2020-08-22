@@ -800,3 +800,5 @@ TwinWave.EvilDoc.ICEIDMathInformer.20200818;Engine:81-255,Target:2;(0&1&2);0:417
 TwinWave.EvilDoc.PPTMSHTAWannaBeABaller.20200818;Engine:81-255,Target:2;(0&1&(2>3));0:4174747269627574652056425f::i;406a2e6d70(5c|2f)::i;202b20::i
 #https://www.youtube.com/watch?v=QF_mUtno-p8
 TwinWave.GetObjectStringManipulationDontMessAroundWithJim.20200804;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;4765744f626a656374::i;1/GetObject[\s_]*\(+[\s_]*(?:Mid|R(?:ight|eplace)|Trim|Left|Split|Chr[WB]?|Range|StrReverse)[\s_]*\$?[\s_]*?\(/si
+#https://www.youtube.com/watch?v=_7PUPNxsRQ0
+TwinWave.EvilDoc.RunDLLFHandlerRunThroughTheJungle.20200822;Engine:81-255,Target:2;(0&1&2&3);0:4174747269627574652056425f::i;72756e646c6c3332::i;55524c2e646c6c::i;46696c6550726f746f636f6c48616e646c6572::i
