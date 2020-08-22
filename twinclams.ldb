@@ -798,3 +798,5 @@ TwinWave.EvilDoc.AutoExecSeparateWays.20200818;Engine:81-255,Target:2;(0&(1|2)&(
 TwinWave.EvilDoc.ICEIDMathInformer.20200818;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;466f72*4f7574707574*4173*5072696e74*436c6f7365::i;1/For[\s_]+Output[\s_]+As[\s_]+(?<var>#[A-Za-z0-9\x2e_-]+).*?(?P<line>Print[\s_]+(?P=var)[\s_]*,[\s_]*[A-Za-z][A-Za-z0-9]*[\s_]*\(+[\s_]*\-?\d+\s+(?:[*\x2f\x5c+^-]|xor)[\s_]+\-?\d+\)).*?(?P=line)/si
 #https://www.youtube.com/watch?v=GFEzDDEn8Zk
 TwinWave.EvilDoc.PPTMSHTAWannaBeABaller.20200818;Engine:81-255,Target:2;(0&1&(2>3));0:4174747269627574652056425f::i;406a2e6d70(5c|2f)::i;202b20::i
+#https://www.youtube.com/watch?v=QF_mUtno-p8
+TwinWave.GetObjectStringManipulationDontMessAroundWithJim.20200804;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;4765744f626a656374::i;1/GetObject[\s_]*\(+[\s_]*(?:Mid|R(?:ight|eplace)|Trim|Left|Split|Chr[WB]?|Range|StrReverse)[\s_]*\$?[\s_]*?\(/si
