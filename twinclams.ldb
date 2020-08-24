@@ -802,3 +802,5 @@ TwinWave.EvilDoc.PPTMSHTAWannaBeABaller.20200818;Engine:81-255,Target:2;(0&1&(2>
 TwinWave.GetObjectStringManipulationDontMessAroundWithJim.20200804;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;4765744f626a656374::i;1/GetObject[\s_]*\(+[\s_]*(?:Mid|R(?:ight|eplace)|Trim|Left|Split|Chr[WB]?|Range|StrReverse)[\s_]*\$?[\s_]*?\(/si
 #https://www.youtube.com/watch?v=_7PUPNxsRQ0
 TwinWave.EvilDoc.RunDLLFHandlerRunThroughTheJungle.20200822;Engine:81-255,Target:2;(0&1&2&3);0:4174747269627574652056425f::i;72756e646c6c3332::i;55524c2e646c6c::i;46696c6550726f746f636f6c48616e646c6572::i
+#https://www.youtube.com/watch?v=uZD8HKVKneI
+TwinWave.EvilDoc.DridexTHeMacroSheatIsOn.20200824;Engine:81-255,Target:7;(0&1&2&3);3c786d3a6d6163726f7368656574::i;0,1:3c3f786d6c::i;4946*54455854524546*454e442e4946::i;2/IF\((?=(?P<var1>[A-Za-z]+)\&lt\;\&gt\;\x22[A-Z-a-z]+\x22\)(?:(?!(?:\send\.if)).)+?\b(?P<var2>[A-Za-z]+)=(?P=var1)(?:(?!(?:\send\.if)).)+?\b(?P<var3>(?!P=var2)[A-Za-z]+)=(?P=var1)(?:(?!(?:\send\.if)).)+?(?P=var1)=TEXTREF\()(?:(?!(?:\send\.if)).)+?(?P<var4>[A-Za-z]+)=(?P=var4)\&amp\;[A-Za-z]+\(/si
