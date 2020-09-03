@@ -810,3 +810,5 @@ TwinWave.EvilDoc.RunDLLZipFldrPurpleRain.20200826;Engine:81-255,Target:2;(0&1&2&
 TwinWave.EvilDoc.CustomTargetDetonatorMightyWings.20200828;Engine:81-255,Target:2;(0&1&(2|3|4|5|6)&7);0:4174747269627574652056425f::i;44656661756c745461726765744672616d65::i;7368656c6c::i;2e65786563::i;2e72756e::i;2e637265617465::i;65786563757465657863656c346d6163726f::i;(2|3|4|5|6)/(?:\.(?:exec|run|create)|shell(?!\x22)(?:execute)?|executeexcel4macro)\b(?:[^\r\n]*?(?: _\s*\n)*?)*?\.[\s_]*DefaultTargetFrame/si
 #https://www.youtube.com/watch?v=OwGuSPXPyX4
 TwinWave.EvilDoc.EmotetARCROClubbedToDeathKurayamino.20200831;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;4172726179*4372656174654f626a656374*437265617465::i;1/Array\b(?:[^\r\n]*?(?: _\s*\n)*?)*?createobject[\s_]*\(+[A-Za-z](?:[^\r\n]*?(?: _\s*\n)*?)*?\.[\s_]*\bcreate\b/si
+#https://www.youtube.com/watch?v=ha3QivnjbIU
+Twinwave.EvilDoc.EQEditorShellCodePreCursorOnlyInDreams.20200903;Engine:81-255,Target:2;(0&1);02CE020000000000C000000000000046;0a0108????B8????????2d????????8B??8B????????????81??????????8b??55ff
