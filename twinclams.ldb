@@ -855,3 +855,5 @@ TwinWave.EvilDoc.EMOCROCreateRomanticWarrior.20201001;Engine:81-255,Target:2;(0&
 TwinWave.EvilDoc.ZloaderSoakedInCinnamon.20200920;Engine:81-255,Target:2;((0|1|2)&3&4);8500{6}0201{1-8192}1800{1-30}000000000001(39|3a);8500{6}0101{1-8192}1800{1-30}000000000001(39|3a);8500{6}0001{1-8192}1800{1-30}000000000001(39|3a);0017??00{1-50}170000420258000600*1F00{0-10}7900{0-100}6F0008(41|42|43|44)??5800;3/\x00\x17(?P<var>[\x01-\x32]\x00[A-Za-z0-9]+)\x17\x00\x00\x42\x02\x58\x00\x06\x00.*?\x00\x17(?P=var).{0,8192}\x1F\x00.{0,10}\x79\x00.{0,100}\x6F\x00\x08[\x41-\x44].\x58\x00\x06\x00/si
 # https://www.youtube.com/watch?v=IxuThNgl3YA
 TwinWave.EvilDoc.CROBornToRunDll.20201007;Engine:81-255,Target:2;(0&1);536574*4372656174654f626a656374*72756e646c6c3332*646c6c7265676973746572736572766572::i;0/Set[\s_]+(?P<var>[A-Za-z][A-Za-z0-9\x2e_-]*)[\s_]+=[\s_]+CreateObject.*?\b(?P=var)\b[\s_]*\.[\s_]*(?:create|Run|Exec)\b[^\r\n]*\brundll32\b[^\r\n]*\bDllRegisterServer\b/si
+#https://www.youtube.com/watch?v=IGzJFJRkmCE
+Twinwave.EvilDoc.DeserializeRinzler.20201007;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;4372656174654f626a656374::i;446573657269616c697a655f32::fi
