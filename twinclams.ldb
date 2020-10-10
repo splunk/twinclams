@@ -845,7 +845,7 @@ TwinWave.EvilDoc.ICEDIDOGORiginalGangsterCROMethodsM2.20200923;Engine:81-255,Tar
 TwinWave.EvilDoc.ICEDIDOGORiginalGangsterCROMethodsM3.20200923;Engine:81-255,Target:2;(0&1&(2|3|4)&5);0:4174747269627574652056425f::i;536574*4372656174654f626a656374::i;72756e::i;65786563::i;637265617465::i;1/Set[\s_]+(?P<var>[A-Za-z][A-Za-z0-9_-]*)[\s_]+=[\s_]+CreateObject[\s_]*\(+[^\r\n\x29]*?[\s][&+][\s].*?with[\s_]*(?P=var)\b(?:(?!(?:\send\s+with)).)+?\.[\s_]*(?:exec|run|create)\b/si
 TwinWave.EvilDoc.ICEDIDOGORiginalGangsterGOMethodsM1.20200923;Engine:81-255,Target:2;(0&1&(2|3|4)&5);0:4174747269627574652056425f::i;536574*4765744f626a656374::i;72756e::i;65786563::i;637265617465::i;1/Set[\s_]+(?P<var>[A-Za-z][A-Za-z0-9_-]*)[\s_]+=[\s_]+GetObject[\s_]*\(+(?!winmgmts:)[^\r\n\x29]*?[\s][&+][\s].*?\b(?P=var)\b[\s_]*\.[\s_]*(?:exec|run|create)\b/si
 #https://www.youtube.com/watch?v=YjYrfV2xIwI
-TwinWave.PolicyKill.Excel4MacrosXORdVelvetUnderground.20200928;Engine:81-255,Target:2;(0&1&(2>200));2F000600000059B30A9A;457863656C20342E30204D6163726F73::awi;6B9A!(00)
+TwinWave.PolicyKill.Excel4MacrosXORdVelvetUnderground.20200928;Engine:81-255,FileSize:20000-800000,Target:2;(0&(1>200));2F000600000059B30A9A;6B9A!(00)
 #https://www.youtube.com/watch?v=e0oeY1KMY9U
 TwinWave.EvilDoc.QakbotTheDuck.20200928;Engine:81-255,Target:2;((0|1|2)&3&4&5&6);8500{6}0201{1-8192}1800{1-30}000000000001(39|3a);8500{6}0101{1-8192}1800{1-30}000000000001(39|3a);8500{6}0001{1-8192}1800{1-30}000000000001(39|3a);446F63755369676EAE::awi;456E61626C65{0-10}436F6E74656E74::awi;456E61626C65{0-10}45646974696E67::awi;79656C6C6F77{0-10}626172::awi
 #https://www.youtube.com/watch?v=cvfxKbpoxRE
