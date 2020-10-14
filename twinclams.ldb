@@ -861,3 +861,5 @@ TwinWave.EvilDoc.CROBornToRunDll.20201007;Engine:81-255,Target:2;(0&1);536574*43
 Twinwave.EvilDoc.DeserializeRinzler.20201007;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;4372656174654f626a656374::i;446573657269616c697a655f32::fi
 #https://www.youtube.com/watch?v=QYoddxj-XAo
 TwinWave.EvilDoc.CROVarCONCATDLWhenIComeAround.20201010;Engine:81-255,Target:2;(0&1&(2|3)&4);0:4174747269627574652056425f::i;4372656174654f626a656374::i;726573706f6e736554657874::if;726573706f6e7365426f6479::if;1/CreateObject[\s_]*\([\s_]*[A-Z-a-z][A-Za-z0-9\x2e_-]*[\s_]*&[\s_]*[A-Z-a-z]/si
+#https://www.youtube.com/watch?v=Z0hFQdEUQKM
+TwinWave.EvilDoc.GOVarVarJaneSays.20201013;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;536574*4765744f626a656374*637265617465::i;1/Set[\s_]*(?P<var>[A-Za-z][A-Za-z0-9\x2e_-]*)[\s_]*=[\s_]*GetObject[\s_]*\([\s_]*[A-Za-z][A-Za-z0-9\x2e_-]*[\s_]*[\x28&][\s_]*[A-Za-z].*?\b(?P=var)\b[\s_]*\.[\s_]*create\b/si
