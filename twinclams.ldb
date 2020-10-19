@@ -865,3 +865,5 @@ TwinWave.EvilDoc.CROVarCONCATDLWhenIComeAround.20201010;Engine:81-255,Target:2;(
 TwinWave.EvilDoc.GOVarVarJaneSays.20201013;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;536574*4765744f626a656374*637265617465::i;1/Set[\s_]*(?P<var>[A-Za-z][A-Za-z0-9\x2e_-]*)[\s_]*=[\s_]*GetObject[\s_]*\([\s_]*[A-Za-z][A-Za-z0-9\x2e_-]*[\s_]*[\x28&][\s_]*[A-Za-z].*?\b(?P=var)\b[\s_]*\.[\s_]*create\b/si
 #https://www.youtube.com/watch?v=nVFz7dVguEQ
 TwinWave.EvilDoc.XLSBNotAloneInTheHouse;Engine:81-255,Target:0;(0&1&2&((3&5)|(4&6)));0:8101009301??C904020040::awi;4b65726e656c3332::awi;4372656174654469726563746f727941::awi;68007400740070::i;68747470::i;3/h\x00t\x00t\x00p\x00(?:s\x00)?\:(?:(?!(?:\x00\x00)).){0,2048}?[\x2f\x5c]\x00(?:\d\x00)+\.\x00(?:p\x00n\x00g|j\x00p\x00(?:e\x00)g|g\x00i\x00f)/si;4/http(s)?\:[^\x00]+[\x2f\x5c]\d+\.(?:png|jpe?g|gif)/si
+#https://www.youtube.com/watch?v=pbZf8GY1-Ag
+TwinWave.EvilDoc.XLSB4IntoTheMystic.20200705;Engine:81-255,Target:0;(0&1>20&2>20);0:8101009301??C904020040::awi;001920000017{0-35}4202580000;000844{0-10}000844{0-10}000844{0-10}000844
