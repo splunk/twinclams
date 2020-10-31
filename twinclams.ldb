@@ -888,3 +888,5 @@ TwinwWave.EvilDoc.ZloaderBackToBasom.20201026;Engine:81-255,Target:0;((0|1&(2|3|
 TwinWave.XLS4.DLToTheLight.20201027;Engine:81-255,Target:0;(0&1&2&3);0:8101009301??C904020040;00040000006500780070006C000000180000001701006500170100780017010070001701006C;0000006800740074007000::i;04002E0070006E0067::i
 #https://www.youtube.com/watch?v=3wk7C64kaP4
 TwinWave.EvilDocs.EmotetContinuationWorldIsAVampire.20201028;Engine:81-255,Target:2;(0&1&2&3&4&5);0:4174747269627574652056425f::i;73686f7777696e646f77::i;(20|0a|2e|0b|09)637265617465::i;205f::i;3/ \_(?:\s*?\n)+(?:\.[\s_]*)?[\s_]*(?:showwindow|create)\b/si;2/create[\x21\x23\x25\x26\x2A\x2B\x2D\x3A\x3B\x3C\x3E\x3F\x40\x5B\x2F\x5D\x5F\x7B\x7C\x7D\x7E]*[\s_]*[A-Z][A-Za-z0-9]*[\s_]*\x28/si
+#https://www.youtube.com/watch?v=zA4OjrpVsiY
+TwinWave.EvilDoc.LokiSeasonOfTheWitch.20201031;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;494d4147455f444f535f484541444552::i;2854686520747269636b29::i
