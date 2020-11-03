@@ -893,3 +893,5 @@ TwinWave.EvilDocs.EmotetContinuationWorldIsAVampire.20201028;Engine:81-255,Targe
 TwinWave.EvilDoc.LokiSeasonOfTheWitch.20201031;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;494d4147455f444f535f484541444552::i;2854686520747269636b29::i
 #https://www.youtube.com/watch?v=OR7R9Kuw2fY
 Twinwave.EvilDoc.DridexWelcomeToParadise.20201102;Engine:81-255,Target:2;(0&1&2&3);0:4174747269627574652056425f::i;45786563757465457863656c344d6163726f2022222026205265706c616365::i;5370656369616c43656c6c73::i;5f4c61796f7574::i
+#https://www.youtube.com/watch?v=NpX0NTEnDtc
+TwinWave.EvilDoc.EMOCROSnakeCharmer.20201103;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;536574*4372656174654f626a656374*637265617465::i;1/Set[\s_]+(?P<var>[A-Za-z][A-Za-z0-9_\x2e-]*)[\s_]+=[\s_]+(?:VBA\.[\s_]*)?CreateObject[\x21\x23\x25\x26\x2A\x2B\x2C\x2D\x3A\x3B\x3C\x3E\x3F\x40\x5B\x2F\x5D\x5F\x7B\x7C\x7D\x7E$]?[\s_]*\(+[\s_]*[A-Za-z].*?\b(?P=var)\b[\s_]*\.[\s_]*create[\s_]+[A-Za-z]/si
