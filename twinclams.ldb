@@ -995,4 +995,5 @@ TwinWave.EvilDoc.DOCXRSTRGOOD.CDO.MESSAGE.REV.201209;Engine:81-255,Target:2;(((0
 TwinWave.EvilDoc.Excel4XLSBSetNameConcatenationRulingTheNation.20201207;Engine:81-255,Target:0;(0&(1>1)&2);0:8101009301??C904020040;000844{4-5}000844{4-5}000844{4-5}000844{4-5}000844{4-5}000844{4-5}000844{4-5}000844{4-5}000844{4-5}000842025800;0042003600
 Twinwave.EvilDoc.HancitorWelcomeToTheMachine.20201210;Engine:81-255,Target:2;(0&1);0:4174747269627574652056425f::i;2620225c573072642e646c6c22::i
 Twinwave.EvilDoc.HancitorWelcomeToTheMachine.M2.20201210;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;43616c6c*416374697665446f63756d656e742e417474616368656454656d706c6174652e50617468::i;1/(?:Mid|R(?:ight|eplace)|Trim|Left|Split|Chr[WB]?|Range|StrReverse)(?:[^\r\n]|\s+_)*?ActiveDocument\.AttachedTemplate\.Path/si
+#https://www.youtube.com/watch?v=AMD2TwRvuoU
 TwinWave.EvilDoc.CROKissFromARose.20201210;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;4372656174654f626a656374::i;1/CreateObject\([^\x29]+\x22[\s_]+[&+][\s_]+\x22/si
