@@ -1007,3 +1007,8 @@ TwinWave.EvilDoc.Excel4UncleJohnsBandAnnoyingNoodleVersion.20201213;Engine:81-25
 TwinWave.EvilDoc.Zloader.ComfortablyNumb.M4.20201208;Engine:81-255,Target:2;((((0|1)&(2|3))|4)&5);0908080000(06|05)4000;0908100000064000{10}0000;57006F0072006B0062006F006F006B00{49}0002;42006F006F006B00{57}0002;0:8101009301??C904020040;507265737320627574746f6e20746f207265636569766520696e766f696365::awi
 #https://www.youtube.com/watch?v=6k8es2BNloE
 TwinWave.EvilDoc.Excel4.BlackSubmarines.2020;Engine:81-255,Target:2;((((0|1)&(2|3)))&4);0908080000(06|05)4000;0908100000064000{10}0000;57006F0072006B0062006F006F006B00{49}0002;42006F006F006B00{57}0002;41646D696E6973747261746F72202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020::awi
+#https://www.youtube.com/watch?v=sLW7zlfvnHI&t=1496s
+TwinWave.EvilDoc.DridexGrownSoUgly.20201214;Engine:81-255,Target:2;(0&1&2&3&4&5);0:4174747269627574652056425f::i;53706c6974::i;436872::i;576f726b626f6f6b2e436c6f7365::i;466f72*45616368*536865657473*43656c6c73*76616c7565*5265706c616365*52756e*4e657874::i;4/Sheets.*?Cells.*?[\s_]*\)\.[\s_]*value[\s_]*=[\s_]*\x22=\x22[\s_]*&[\s_]*Replace[\s_]*\(.*?\([\s_]*Split[\s_]*\(/si
+#https://www.youtube.com/watch?v=TxQkdwT3d7g
+TwinWave.EvilDoc.ICEDIDHolyGrail.20201214;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;46756e6374696f6e*446573*446573*5265706c616365::i;1/Function[\s_]+Des[\s_]*.*?\bDes[\s_]*=[\s_]*\x3a*[\s_]*Replace[\s_]*\([\s_]*[A-Za-z]/si
+TwinWave.EvilDoc.CROKissFromARose.M3.20201214;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;4372656174654f626a656374::i;1/CreateObject[\s\_]*\(+[\s_]*[A-Za-z][^\r\n]*?\.(?:run|exec)[^\r\n]*?[A-Za-z](?=[^\r\n]*[A-Za-z0-9\x2e_-]*[\s_]+\&[\s_]+\x22+\s*\x22+[\s_]+\&)/si
