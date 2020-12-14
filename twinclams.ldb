@@ -1012,3 +1012,4 @@ TwinWave.EvilDoc.DridexGrownSoUgly.20201214;Engine:81-255,Target:2;(0&1&2&3&4&5)
 #https://www.youtube.com/watch?v=TxQkdwT3d7g
 TwinWave.EvilDoc.ICEDIDHolyGrail.20201214;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;46756e6374696f6e*446573*446573*5265706c616365::i;1/Function[\s_]+Des[\s_]*.*?\bDes[\s_]*=[\s_]*\x3a*[\s_]*Replace[\s_]*\([\s_]*[A-Za-z]/si
 TwinWave.EvilDoc.CROKissFromARose.M3.20201214;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;4372656174654f626a656374::i;1/CreateObject[\s\_]*\(+[\s_]*[A-Za-z][^\r\n]*?\.(?:run|exec)[^\r\n]*?[A-Za-z](?=[^\r\n]*[A-Za-z0-9\x2e_-]*[\s_]+\&[\s_]+\x22+\s*\x22+[\s_]+\&)/si
+TwinWave.EvilDoc.XLSBDyingOutWest.20201214;Engine:81-255,Target:2;(0&1&2);0:8101009301??C904020040;17??007200650067007300760072003300320020002D007300200044::i
