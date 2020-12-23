@@ -1032,3 +1032,5 @@ TwinWave.EvilDoc.OOXMLXLSLOLBINHammerToFall.20201218;Engine:81-255,Target:7;(25&
 TwinWave.EvilDoc.CROWithSailWhosStillListeningIn2020.20201218;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;57697468*4372656174654f626a656374*456e642057697468::i;1/With[\s_]*CreateObject\([\s_]*[A-Za-z](?:(?!(?:end[\s_]+with)).)+?\.[\s_]*(?:create|exec|run|ShellExecute)\b/si
 #https://www.youtube.com/watch?v=LBC3NXnN8y4&t=620s
 TwinWave.EvilDoc.PiggyCall.20201222;Engine:81-255,Target:2;(0&1>40&2);0:4174747269627574652056425f::i;43616c6c20::i;1/Call[\s_]+[A-Za-z]+(?:[\s_]*\.[A-Za-z]+[\s_]*)+\([A-Za-z]+(?:[\s_]*\.[A-Za-z]+[\s_]*)+\([\s_]*\d+[\s_]*,.*?Call[\s_]+[A-Za-z]+(?:[\s_]*\.[A-Za-z]+[\s_]*)+\([A-Za-z]+(?:[\s_]*\.[A-Za-z]+[\s_]*)+\([\s_]*\d+[\s_]*,/si
+#https://www.youtube.com/watch?v=v5KUScem_2
+TwinWave.EvilDoc.EMOsALonerDottieARebel.20201223;Engine:81-255,Target:2;(0&(1|2)&3>20&4&5);0:4174747269627574652056425f::i;4372656174654f626a656374::i;4765744f626a656374::i;436c6f73652023::i;5642412e5265706c616365205f::i;2e53746f727952616e6765732e4974656d283129::i
