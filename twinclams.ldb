@@ -1038,3 +1038,5 @@ TwinWave.EvilDoc.EMOsALonerDottieARebel.20201223;Engine:81-255,Target:2;(0&(1|2)
 TwinWave.EvilDoc.OOXMLSheetRefPartyHaveYourSelfAMerryLittleXmas.20201224;Engine:81-255,Target:7;(0&1&((2|3|4)&(5|6)|7));3c786d3a6d6163726f7368656574::i;0,1:3c3f786d6c::i;657865632824::i;72756e2824::i;666f726d75616c2e66696c6c2824::i;72656769737465722824::i;63616c6c2824::i;27494e53454e47::i
 #https://www.youtube.com/watch?v=fsccjsW8bSY
 TwinWave.EvilDoc.EMOThisMustBeThePlace.20201229;Engine:81-255,Target:2;(0&(1|2)&3>10&4&5&6);0:4174747269627574652056425f::i;4372656174654f626a656374::i;4765744f626a656374::i;436c6f73652023::i;5265706c616365::i;53746f727952616e676573::i;5/StoryRanges[\s_]*\.[\s_]*Item[\s_]*\(+[^\x29]+\s(?:[\x2a\x2d\x2b\x2f\x5e\x25]|xor)/si
+#https://www.youtube.com/watch?v=qC5GqbCtxbM
+TwinWave.EvilDoc.WeAreAPartOfTheRythmNation.20201229;Engine:81-255,Target:2;(0&1&2&3);0:4174747269627574652056425f::i;536574*4372656174654f626a656374*536574*4e6f7468696e67::i;4368722841736328*56616c284d6964::i;1/Set[\s_]*(?P<var>[A-Za-z][A-Za-z0-9\x2e_-]*)[\s_]*=[\s_]*CreateObject[\s_]*\([\s_]*[A-Za-z].*?Set[\s_]*(?P=var)[\s_]*=[\s_]*Nothing/si
