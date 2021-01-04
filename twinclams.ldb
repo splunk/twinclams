@@ -1043,3 +1043,7 @@ TwinWave.EvilDoc.WeAreAPartOfTheRythmNation.20201229;Engine:81-255,Target:2;(0&1
 TwinWave.EvilDoc.WeAreAPartOfTheRythmNation.20201230;Engine:81-255,Target:2;(0&1&2&3);0:4174747269627574652056425f::i;536574205773685368656c6c203d204e6f7468696e67::i;2e526573706f6e7365626f6479::i;4372656174654f626a656374::i
 #https://www.youtube.com/watch?v=6-78xjN418c
 TwinWave.EvilDoc.UnderWorldCowGirlVar2Far.20201229;Engine:81-255,Target:2;(0&(1|2|3|4|5|6)&7);0:4174747269627574652056425f::i;2e72756e::i;2e20::i;2e65786563::i;2e6f70656e::i;2e637265617465::i;7368656c6c::i;(1|2|3|4|5|6)/(?:Shell(?!\x22)(?:Execute)?|\.[\s_]*(Run|exec|Open|Create))[\x21\x23\x25\x26\x2A\x2B\x2C\x2D\x3A\x3B\x3C\x3E\x3F\x40\x5B\x2F\x5D\x5F\x7B\x7C\x7D\x7E$]*[\s_]*\x28*[\s_]*[A-Za-z](?=(?-i)[A-Za-z]*?[a-z][A-Z][A-Za-z]*?[a-z][A-Z][A-Za-z]*?[a-z][A-Z](?i))[A-Za-z]{29,}[\s_]*\(/si
+#https://www.youtube.com/watch?v=Yam5uK6e-bQ
+TwinWave.EvilDoc.CookieStealerDreams.20210104;Engine:81-255,Target:2;(0&1&2&3&4);0:4174747269627574652056425f::i;4372656174654f626a656374::i;2e4e616d657370616365::i;7368656c6c3a436f6f6b696573::i;4f70656e::i
+#https://www.youtube.com/watch?v=FFqb1I-hiHE
+TwinWave.EvilDoc.TheWeight.20210104;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;0:4174747269627574652056425f::i;2e52756e20477261766974792026202222202620::i
