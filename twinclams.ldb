@@ -1095,3 +1095,5 @@ TwinWave.EvilDoc.ICEDIDEverNeverNeverEverHideYourHeart.20210126;Engine:81-255,Ta
 Twinwave.EvilDoc.HancitorWelcomeToTheMachine.20210126;Engine:81-255,Target:2;((0|1)&(2));5c4465736b746f705c4275696c6465725f76365c::iaw;573072642e646c6c::fiaw;5c564245(36|37)2e646c6c::iaw
 #https://www.youtube.com/watch?v=noLPhZvcBpw
 TwinWave.EvilDoc.ShellDreamWarriors.20210126;Engine:81-255,Target:2;(0&1&2&3&4);0:4174747269627574652056425f::i;203d20::i;44696d*4173*6e6577*5368656c6c3332*5368656c6c*5368656c6c45786563757465::i;1/ = [A-Za-z][A-Za-z0-9\x2e_-]*[\s_]+&[\s_]+[A-Za-z]/si;2/Dim[\s_]+(?P<var>[A-Za-z][A-Za-z0-9\x2e_-]*)[\s_]+As[\s_]+New[\s_]+Shell32[\s_]*\.Shell.*?\b(?P=var)[\s_]*\.ShellExecute\b[\s_]*\(*[\s_]*(?:\x22\x22[\s_]+&[\s_]+)?[A-Za-z][A-Za-z0-9\x2e_-]*[\s_]*,[\s_]*(?:\x22\x22[\s_]+&[\s_]+)?[A-Za-z]/si
+#https://www.youtube.com/watch?v=VtW8RkI3-c4
+TwinWave.EvilDoc.MuddyWaterBurnOn.20210126;Engine:81-255,Target:2;(0&1&2&3&4);0:4174747269627574652056425f::i;5374617274204d656e755c50726f6772616d735c53746172747570::i;4372656174655465787446696c65::if;4372656174654f626a656374::if;7061747465726e::if
