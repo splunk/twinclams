@@ -1322,3 +1322,6 @@ TwinWave.EvilDoc.RemoteTemplateCallKimusky.20210402;Engine:81-255,Target:7;(0&1&
 TwinWave.EvilDoc.SpaceYourFace.20210405;Engine:81-255,Target:2;(0&1&(2|3|4|5|6|7|8));0:4174747269627574652056425f::i;57696e45786563*4c6962*226b65726e656c33322020::i;5f526573697a6528::i;5f416464436f6e74726f6c::i;5f436c69636b28::i;5f4f6e436f6e6e656374696e672822::i;5f4c61796f757428::i;5f496e697469616c697a6528::i;5f416374697661746528::i
 #https://www.youtube.com/watch?v=hv_zJrO_ptk
 TwinWave.EvilDoc.GETObjectConcatDevilInside.20210406;Engine:81-255,Target:2;(0&(1&3)|(2&4));0:4174747269627574652056425f::i;4765744f626a656374::i;4372656174654f626a656374::i;1/GetObject\(+[\s_]*?(?:[A-Za-z][A-Za-z0-9\x2e_-]*\()*?[\s_]*\x22\x22[\s_]*[&+]/si;2/CreateObject\(+[\s_]*?(?:[A-Za-z][A-Za-z0-9\x2e_-]*\()*?[\s_]*\x22\x22[\s_]*[&+]/si
+TwinWave.EvilDoc.XLSBConcat2FarPolicyKillMyPhilosophy.20210406;Engine:81-255,Target:0;(0&(1>8)&2);0:8101009301;170000081700000817000008;0042??(95|96)00
+#https://www.youtube.com/watch?v=snILjFUkk_A
+TwinWave.EvilDoc.XLSBBuilderNeverLetMeDownAgain.20210406;Engine:81-255,Target:0;(0&1&2);0:83010080;72004900640031000E0000004400690067006900740061006C0044006500660065006E00730065009C::i;4100750074006F005F004F00700065006E00090000003A::i
