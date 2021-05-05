@@ -1459,3 +1459,7 @@ TwinWave.EvilDoc.VanillaICEDID.20210429;Engine:81-255,Target:2;(0&1&(2|3|4|5)&6)
 TwinWave.EvilDoc.RTF.TemplateUnicodeHighwayToHell.20210503;Engine:81-255,Target:0;(0);0:7b5c7274*5c74656d706c617465*5c752d36353433323f5c752d36353432303f5c752d36353432303f5c752d36353432343f{0-10}5c752d36353437383f5c752d36353438393f5c752d36353438393f::i
 #https://www.youtube.com/watch?v=_jCuroTbqBI
 TwinWave.EvilDoc.Dridex.UGotTheLook.20210504;Engine:81-255,Target:2;(0&(1|2)&3&4&5&(6|7));0:4174747269627574652056425f::i;537562*20223d22::i;46756e6374696f6e*20223d22::i;52756e::i;466f726d756c614c6f63616c::i;2220262022::i;1/Sub[\s_]+(?P<var>[A-Z][A-Za-z0-9\x2e_-]*).*?\b(?P=var)[\s_]*=[\s_]*?\x22=\x22/si;2/Function[\s_]+(?P<var>[A-Z][A-Za-z0-9\x2e_-]*).*?\b(?P=var)[\s_]*=[\s_]*?\x22=\x22/si
+#https://www.youtube.com/watch?v=L-4XsDQYDi4
+TwinWave.EvilDoc.MavHasMightyWings.20210504;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;6d6176696e6a656374::i;696e6a65637472756e6e696e67::i
+#https://www.youtube.com/watch?v=5-WpsdC2-Cc
+TwinWave.EvilDoc.CROOHSherrie.20210504;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;4372656174654f626a656374::i;1/CreateObject[\s_]*?\([\s_]*?(?:\x22\x22[\s_]+&[\s_]+)?[A-Za-z][A-Za-z0-9\x2e_-]{50}/si
