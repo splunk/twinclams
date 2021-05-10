@@ -1473,3 +1473,7 @@ TwinWave.EvilDoc.VanillaVBAZombies.20210506;Engine:81-255,Target:2;(0&1&2);0:417
 Twinwave.EvilDoc.MetadataMAI.20210507;Engine:81-255,Target:2;(0&(1|2|3|4)&5);0:4174747269627574652056425f::i;736574*4275696c74496e446f63756d656e7450726f706572746965*65786563::i;736574*4275696c74496e446f63756d656e7450726f706572746965*72756e::i;736574*4275696c74496e446f63756d656e7450726f706572746965*7368656c6c::i;736574*4275696c74496e446f63756d656e7450726f706572746965*637265617465::i;(1|2|3|4)/set[\s_]+(?P<var>[A-Za-z][A-Za-z0-9\x2e_-]*)[\s_]*?=[^\r\n]*BuiltInDocumentProperties.*?(?:\.[\s_]*?(?:exec|run|create)|shell(?:execute)?)[^\r\n]*\b(?P=var)\b/si
 #https://www.youtube.com/watch?v=Qg0RA0yWmjg
 TwinWave.EvilDoc.ICEDIDMeAgainstTheWorld.20210507;Engine:81-255,Target:2;(0&1&2&3);0:4174747269627574652056425f::i;6e657720416374697665584f626a656374::i;416464436f6465::i;3c736372697074206c616e6775616765::i
+#https://www.youtube.com/watch?v=9CrBqRb3VGM
+##https://www.youtube.com/watch?v=9CrBqRb3VGM
+TwinWave.EvilDoc.ICEDRustyCage.20210510;Engine:81-255,Target:2;(0&1&2);0:4174747269627574652056425f::i;46756e6374696f6e*73747272657665727365*55736572666f726d*74657874626f78::i;0/Function[\s_]+(?P<var>[A-Za-z][A-Za-z0-9\x2e_-]*).*?\b(?P=var)[\s_]*=[\s_]*StrReverse[\s_]*?\([\s_]*UserForm\d+[\s_]*\.[\s_]*?TextBox/si
+TwinWave.EvilDoc.ICEDRustyCage.M2.20210510;Engine:81-255,Target:2;(0|1|2|3|4);2f2f3a707474682220::i;2254454722::i;5c617461646d6172676f72705c3a63::i;5c3a632032336c6c646e7572::i;287463656a624f657461657243::i
