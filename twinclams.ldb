@@ -1506,3 +1506,5 @@ TwinWave.EvilDoc.XL4SilentNoChurchInTheWild.20210520;Engine:81-255,Target:0;((((
 TwinWave.EvilDoc.Dridex.Low.20210520;Engine:81-255,Target:2;(0&1);0:4174747269627574652056425f::i;576f726b626f6f6b5f4f70656e*3d2031202f2030*4572722e4e756d626572*225468616e6b20596f752122::i
 TwinWave.EvilDoc.OXML.EvilMacroSheetMignightQakTrainToMemphis.20210521;Engine:81-255,Target:7;(0&(1|2)&3&4);0,1:3c3f786d6c::i;3c786d3a6d6163726f7368656574::i;3c776f726b7368656574::i;3c763e*2e646174::i;3/<v>[^<]*\d{5}\x2c\d{10}\.dat/si
 TwinWave.EvilDoc.OXML.EvilMacroSheetMignightQakTrainToMemphis.M2.20210521;Engine:81-255,Container:CL_TYPE_OOXML_XL,Target:7;(0&1&2);0,1:3c3f786d6c::i;3c63703a636f726550726f70657274696573::i;3c64633a63726561746f723e5261626f74613c2f64633a63726561746f723e::i
+##https://www.youtube.com/watch?v=Yif302-A5oU
+TwinWave.EvilDoc.EvilShellZExecTemplateGalaxie.20210524;Engine:81-255,Target:2;(0&1&(2|3)&4&5&6&7);0:4174747269627574652056425f::i;5669727475616c416c6c6f63::i;52746c4d6f76654d656d6f7279::i;577269746550726f636573734d656d6f7279::i;4172726179::i;264831303030*26483430::i;4/Array[\s_]*\([\s_,]*\-?\d+(?:[\s_]*,[\s_]*\-?\d+){200}/si;5/&H1000[\s_]*,[\s_]*&H40\b/si
