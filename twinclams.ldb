@@ -1650,3 +1650,5 @@ TwinWave.EvilDoc.DawnOfTheFynalDay.M2.20210629;Engine:81-255,Container:CL_TYPE_M
 TwinWave.EvilDoc.BazarCosmicGear.20210629;Engine:81-255,Target:2;(0&1);4372656174654f626a656374::i;0/CreateObject[\s_]*\(([A-Za-z][A-Za-z0-9\x2e_-]*[\s_]*\(+[\s_]*)*?[\s_]*(?:Not[\s_]+)?-?\d+[\x2e0-9-]*\#?[\x28\x29]*[\s_]*(?:[\x2a\x2d\x2b\x2f\x5e\x25]|x?or|and)[\s_]/si
 #https://www.youtube.com/watch?v=NlwIDxCjL-8
 TwinWave.EvilDoc.InlineShapeOfMyHeart.20210629;Engine:81-255,Target:2;(0&1&2);496e6c696e65536861706573::i;4966*54797065::i;1/If[\s_]+[A-Za-z][A-Za-z0-9\x2e_-]*[\s_]*\.[\s_]*Type[\s_]*=[^\r\n]*\d+[\x2e0-9-]*\#?[\x28\x29]*[\s_]*(?:[\x2a\x2d\x2b\x2f\x5e\x25]|x?or|and)\s/si
+#https://www.youtube.com/watch?v=ilRhcs1-a0k
+Twinwave.EvilDoc.RTFSquiblyDooForeverYou.20210701;Engine:81-255,Target:0;(0&(7|(1|2|3|4)&(5|6)));0:7B5C7274;3265*3733*3633*3734::i;3265*3533*3433*3534::i;3363*3733*3633*3732*3639*3730*3734*3663*3635*3734::i;3363*3533*3433*3532*3439*3530*3534*3463*3435*3534::i;(1|2)/2e\s*(?:00)?[57]3\s*(?:00)?\s*[64]3\s*(?:00)?[57]4/si;(3|4)/3c\s*(?:2f\s*)?[75]3\s*[64]3\s*[75]2\s*[64]9\s*[75]0\s*[75]4\s*[64]c\s*[64]5\s*[75]4/si;3265(3733|3533)(3633|3433)(3734|3534)::i
