@@ -1866,3 +1866,5 @@ TwinWave.EvilDoc.FoolsHighwayM1.20210826;Engine:81-255,Container:CL_TYPE_OOXML_W
 TwinWave.EvilDoc.FoolsHighwayM2.20210826;Engine:81-255,Container:CL_TYPE_OOXML_XL,Target:5;(0&1);3C7264663A4261673E*456E61626C65*3C2F7264663A426167::i;0/<rdf\:Bag(?:(?!(?:<\/rdf\:Bag)).)+?enable(?:\s|&quot\;)*(?:editing|content)/si
 TwinWave.EvilDoc.FoolsHighwayM3.20210826;Engine:81-255,Container:CL_TYPE_MSOLE2,Target:5;(0&1);3C7264663A4261673E*456E61626C65*3C2F7264663A426167::i;0/<rdf\:Bag(?:(?!(?:<\/rdf\:Bag)).)+?enable(?:\s|&quot\;)*(?:editing|content)/si
 TwinWave.EvilDoc.FoolsHighwayM4.20210826;Engine:81-255,Target:2;(0&1);3C7264663A4261673E*456E61626C65*3C2F7264663A426167::i;0/<rdf\:Bag(?:(?!(?:<\/rdf\:Bag)).)+?enable(?:\s|&quot\;)*(?:editing|content)/si
+#https://www.youtube.com/watch?v=rAX_RHxncMo
+TwinWave.EvilDoc.NoUIcedU21stCenturyDigitalBoy.20210826;Engine:81-255,Target:2;(0&1&2);5C564245(37|36)2E444C4C;0000000166;1/\x00\x00\x00\x01f(?!uck u)(?P<split>[^u]{1,20})u(?P=split)c(?P=split)k(?P=split)(?:\s*(?P=split))+u(?P=split)/si
