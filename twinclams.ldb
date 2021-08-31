@@ -1878,3 +1878,5 @@ TwinWave.EvilDoc.DDESynderWantsToRock.20210827;Engine:81-255,Container:CL_TYPE_O
 #https://www.youtube.com/watch?v=qoX6AKuYWL8
 TwinWave.EvilDoc.VBA2DotNetBridgehLightMyFire.20210829;Engine:81-255,Container:CL_TYPE_MSOLE2,Target:0;(0&1&2);617474726962757465207662::i;446573657269616c697a655f32::i;44796e616d6963496e766f6b65::i
 TwinWave.EvilDoc.PDATARootDown.20210830;Engine:81-255,Container:CL_TYPE_MSOLE2,Target:0;(0&1&2);617474726962757465207662::i;633a*50726f6772616d64617461::i;1/c\:[\x2f\x5c]+programdata[\x2f\x5c]+[^\x5c\x22\x2f]+\.(?:s(?:ettingcontent-ms|c[rt])|(?:dl|xs)l|j(?:ar|se)|vb[es]|bat|cmd|exe|msi|ps1|wsf|hta)\b/si
+#https://www.youtube.com/watch?v=Obim8BYGnOE
+TwinWave.EvilDoc.XLSBGoziTillIColapse.20210830;Engine:81-255,Target:0;((0|1|2)&3&4);0:9f01??????0000;0:8301008001;0:8101009301;0017(01|02|03|04|05|06|07|08)005500{0-8194}0042(06|07|08|09)9600;42016E00
