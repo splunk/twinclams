@@ -67,8 +67,6 @@ elif options.d:
     print(options.input_target)
     options.input_target = options.input_target.decode("string_escape")
     # options.input_target = options.input_target.encode("hex").decode("hex")
-print(type(options.input_target))
-print(type(options.input_target))
 if options.z:
     tmp_strings = options.input_target.split(",")
     for entry in tmp_strings:
@@ -367,7 +365,7 @@ if options.l:
                     if sl[0] == su[0]:
                         regex += ")|(?:&#(?:{0}(?:\.\d+)*\;|x{1}\;)))".format(ord(s[0]), s[0].encode("hex"))
                     else:
-                        regex += ")|(?:&#(?:(?:{0}|{1})(?:\.\d+)*|x(?:{2}|{3}))\;))".format(
+                        regex += ")|(?:&#(?:(?:{0}|{1})(?:\.\d+)*|x(?:{2}|{3}))\;)))".format(
                             ord(sl[0]), ord(su[0]), su[0].encode("hex"), sl[0].encode("hex")
                         )
                 else:
@@ -399,7 +397,7 @@ if options.l:
             "TwinWave.EvilDoc.DOCXSTRGOOD.XMLENTITY.{0}.{1};Engine:81-255,Target:7;(0&(1|2|3)&4);0,1:3c3f786d6c::i;{2}::i;{3}::i;{4}::i;(1|2|3)/{5}/si".format(
                 s.upper().replace(";", "").replace(" ", "SPCE"),
                 dstamp,
-                "#&".encode("hex"),
+                "&#".encode("hex"),
                 s[0].encode("hex") + s[1].encode("hex"),
                 (s[0] + "&#").encode("hex"),
                 regex,
