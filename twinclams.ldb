@@ -2037,3 +2037,8 @@ TwinWave.EvilDoc.DOCXSTRGOOD..EXE.211019;Engine:81-255,Target:2;(0&(1|2|3|4|5|6)
 TwinWave.EvilDoc.BatCountryEasyOnMe.20211020;Engine:81-255,Container:CL_TYPE_MSOLE2,Target:0;(0&1&2&3);6174747269627574652076625f::i;37372e626174::i;5072696e742023::i;5368656c6c28626174::i
 #https://www.youtube.com/watch?v=5CR4lSORZ_Q
 TwinWave.EvilDoc.TrickyHeartBeat.20211020;Engine:81-255,Container:CL_TYPE_ISO9660,Target:0;(0&1&2);0:4C000000011402;720075006E0064006C006C0033003200::i;1/\x72\x00\x75\x00\x6E\x00\x64\x00\x6C\x00\x6C\x00\x33\x00\x32\x00(?:\x2E\x00\x65\x00\x78\x00\x65\x00)?(?:\s\x00)+c\x00\x3a\x00\x5c\x00p\x00r\x00o\x00g\x00r\x00a\x00m\x00d\x00a\x00t\x00a\x00\x5c(?:(?!(?:(?:\x00\x00|[\x5c\x2c]))).)+?\x2c/si
+https://www.youtube.com/watch?v=U3E5_qbdSRI
+TwinWave.EvilDoc.CancionDelMariachi.20211020;Engine:81-255,Container:CL_TYPE_MSOLE2,Target:0;(0&1);6174747269627574652076625f::i;2b20224a414251414849
+#https://www.youtube.com/watch?v=WWSLM2lFjvg
+TwinWave.EvilDoc.ADayInTheLifeOfAPlayerNamedIcey.20211020;Engine:81-255,Container:CL_TYPE_OOXML_WORD,Target:0;(0&1&2);0,1:3C3F786D6C::i;D0A0D0B8D181D183D0BDD0BED0;1/<w\:.*?n(?P<split>.{0,20})?e(?P=split)?w(?P=split)?(?:\s+(?P=split))*?A(?P=split)?c(?P=split)?t(?P=split)?i(?P=split)?v(?P=split)?e(?P=split)?X(?P=split)?O(?P=split)?b(?P=split)?j(?P=split)?e(?P=split)?c(?P=split)?t/si
+TwinWave.EvilDoc.ADayInTheLifeOfAPlayerNamedIcey.M2.20211020;Engine:81-255,Container:CL_TYPE_OOXML_WORD,Target:7;(0&1&2);0,1:3C3F786D6C::i;5C63696C6275705C73726573755C3A63::i;6174682E::i
