@@ -2260,3 +2260,5 @@ TwinWave.EvilDoc.DOCXRSTRGOOD._DATA_HU_GET_.220110B64.6;Engine:81-255,Target:0;(
 TwinWave.EvilDoc.CROStackGridOfDeath.20220110;Engine:81-255,Container:CL_TYPE_MSOLE2,Target:0;(0&1&2);6174747269627574652076625f::i;4372656174654f626a65637428*2e4372656174654f626a65637428::i;1/CreateObject\((?:[^\r\n]*?(?: _\s*\r?\n)*?)*\.[\s_]*CreateObject\(/si
 #https://www.youtube.com/watch?v=ubY3RagH1Nw
 TwinWave.EvilDoc.BrassAgainstYourEnemyEdwardsPacker.20220110;Engine:81-255,Target:0;(0&1&2);0:D0CF11E0A1B11AE1;6576616C2866756E6374696F6E28702C612C632C6B2C652C64::aw;5C564245(37|36)2E444C4C::aw
+#https://www.youtube.com/watch?v=BgrPcWfGMK0
+TwinWave.EvilDoc.DLAndDetonateBlameMe.20220110;Engine:81-255,Container:CL_TYPE_MSOLE2,Target:0;(0&1&2&3&(4|5)&6&7);6174747269627574652076625f::i;4372656174654f626a656374::i;6f70656e::i;73656e64::i;726573706f6e7365426f6479::i;726573706f6e736554657874::i;73617665746f66696c65::i;6/savetofile[\s_]+(?P<var>[^\x2c\r\n]+)[\s_]*\,.*?(?:\.[\s_]*(?:run|exec|create)|shell(?:execute)?)\b(?:[^\r\n]*?(?: _\s*\n)*?)*?(?P=var)/si
