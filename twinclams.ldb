@@ -2262,3 +2262,5 @@ TwinWave.EvilDoc.CROStackGridOfDeath.20220110;Engine:81-255,Container:CL_TYPE_MS
 TwinWave.EvilDoc.BrassAgainstYourEnemyEdwardsPacker.20220110;Engine:81-255,Target:0;(0&1&2);0:D0CF11E0A1B11AE1;6576616C2866756E6374696F6E28702C612C632C6B2C652C64::aw;5C564245(37|36)2E444C4C::aw
 #https://www.youtube.com/watch?v=BgrPcWfGMK0
 TwinWave.EvilDoc.DLAndDetonateBlameMe.20220110;Engine:81-255,Container:CL_TYPE_MSOLE2,Target:0;(0&1&2&3&(4|5)&6&7);6174747269627574652076625f::i;4372656174654f626a656374::i;6f70656e::i;73656e64::i;726573706f6e7365426f6479::i;726573706f6e736554657874::i;73617665746f66696c65::i;6/savetofile[\s_]+(?P<var>[^\x2c\r\n]+)[\s_]*\,.*?(?:\.[\s_]*(?:run|exec|create)|shell(?:execute)?)\b(?:[^\r\n]*?(?: _\s*\n)*?)*?(?P=var)/si
+#https://www.youtube.com/watch?v=3GCZYsBBpf0
+TwinWave.EvilDoc.EmoEsqXLS46And2.20210112;Engine:81-255,Container:CL_TYPE_OOXML_XL,Target:7;(0&1&2);0,1:3c3f786d6c::i;3c663e*5428*3c2f663e*3c76*2e2e5c*2e6f6378::i;1/<f>[^<]*T\([^<]*<\/f>(?:(?!(?:<\/f>)).)*?<v[^<]*\x2e\x2e\x5c[^\x5c<]+\.ocx/si
