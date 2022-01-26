@@ -2328,3 +2328,4 @@ TwinWave.EvilDoc.DlAndDetGoziDontDreamItsOver.20220126;Engine:81-255,Container:C
 #https://www.youtube.com/watch?v=yMzyleT2FqY
 TwinWave.EvilDoc.HTAHysteria.20220126;Engine:81-255,Container:CL_TYPE_MSOLE2,Target:0;(0&1&2);6174747269627574652076625f::i;4372656174655465787446696c65*466f6c6c6f7748797065724c696e6b::i;1/CreateTextFile\([\s_]*(?P<var>[^\x2c]+).*?\.[\s_]*FollowHyperLink[\s_]+(?P=var)/si
 TwinWave.EvilDoc.HTAHysteria.M2.20220126;Engine:81-255,Container:CL_TYPE_MSOLE2,Target:0;(0&1&2);6174747269627574652076625f::i;466f6c6c6f7748797065724c696e6b*2e687461::i;1/FollowHyperlink\b(?:[^\r\n]*?(?: _\s*\r?\n)*?)*\.hta\b/si
+TwinWave.EvilDoc.XLLHellsBells.20220126;Engine:81-255,Target:1;(0&1);786c4175746f4f70656e::awi;72756e646c6c3332::awi
