@@ -2592,3 +2592,4 @@ TwinWave.EvilDoc.PKILLOOXMLRelsGitHubWindBelow.20220427;Engine:81-255,Target:7;(
 TwinWave.Encoder.Javascript_Obfuscator_Usage_Observed_M1.20220427;Engine:81-255,Target:3;(0&1&2&3&4);7661725F3078::i;0/[a-f0-9]+/i;5F3078::i;5F3078::i;5F3078::i
 TwinWave.Encoder.Javascript_Obfuscator_Usage_Observed_M2.20220427;Engine:81-255,Target:3;(0&1&2&3&4);66756E6374696F6E5F3078::i;0/[a-f0-9]+/i;5F3078::i;5F3078::i;5F3078::i
 TwinWave.Encoder.Javascript_Obfuscator_Usage_Observed_M3.20220427;Engine:81-255,Target:3;(0&1&2&3&4);72657475726E5F3078::i;0/[a-f0-9]+/i;5F3078::i;5F3078::i;5F3078::i
+TwinWave.LNKPShellMotherBoardFire.20220428.20220426;Engine:81-255,Target:0;(0&1&2);4C000000011402;7000::ai;1/p\x00(?!o\x00w\x00e\x00r\x00s\x00h\x00e\x00l\x00l)(?:[`^]\x00)*o\x00(?:[`^]\x00)*w\x00(?:[`^]\x00)*e\x00(?:[`^]\x00)*r\x00(?:[`^]\x00)*s\x00(?:[`^]\x00)*h\x00(?:[`^]\x00)*e\x00(?:[`^]\x00)*l\x00(?:[`^]\x00)*l/si
