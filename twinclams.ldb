@@ -2639,3 +2639,5 @@ TwinWave.EvilDoc.XLSBQakySoWacky.20220505;Engine:81-255,Target:0;(0&1&2);0:81010
 TwinWave.EvilDoc.RTF.TemplateUnicodeHighwayToHell.M2.20220505;Engine:81-255,Target:0;(0&1);0:7b5c7274*5c74656d706c617465;0/\btemplate\b.*?\{\s*(?:\\u-65432\?|h(?!ttps?\x3a\/\/))(?:t|\\u-65420\?){2}(?:p|\\u-65424\?).{0,10}(?:\x3a|\\u-65478\?)(?:\\u-65489\?|\x2f){2}/si
 #https://youtu.be/Vd3WnrKxbog?t=52
 TwinWave.EvilLNK.PKILLBrapBrapRay.20220505;Engine:81-255,Target:0;(0&1&2);4C000000011402;6D00::i;1/m\x00(?:[`^]\x00)*s\x00(?:[`^]\x00)*i\x00(?:[`^]\x00)*e\x00(?:[`^]\x00)*x\x00(?:[`^]\x00)*e\x00(?:[`^]\x00)*c\x00.*?[\x5c\x2f-]\x00[Ii]\x00(?:\s\x00)*(?:[\x22\x27]\x00)*h\x00(?:[`^]\x00)*t\x00(?:[`^]\x00)*t\x00(?:[`^]\x00)*p\x00(?:[`^]\x00)*(?:s\x00(?:[`^]\x00)*)?\x3a\x00(?:[`^]\x00)*/si
+#https://www.youtube.com/watch?v=4VxdufqB9zg
+TwinWave.EvilRtf.PkillEXESomethingInTheWay.20220506;Engine:81-255,Target:0;(0&1&2&3&4);0:7B5C7274;5C6F626A636C617373::i;5061636B616765::i;5C6F626A64617461::i;643231353436383639373332303730373236663637373236313664::i
