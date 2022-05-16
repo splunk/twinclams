@@ -2642,3 +2642,6 @@ TwinWave.EvilLNK.PKILLBrapBrapRay.20220505;Engine:81-255,Target:0;(0&1&2);4C0000
 #https://www.youtube.com/watch?v=4VxdufqB9zg
 TwinWave.EvilRtf.PkillEXESomethingInTheWay.20220506;Engine:81-255,Target:0;(0&1&2&3&4);0:7B5C7274;5C6F626A636C617373::i;5061636B616765::i;5C6F626A64617461::i;643231353436383639373332303730373236663637373236313664::i
 TwinWave.EvilDoc.PKILLOOXMLRelsTransferSHWindBelow.20220427;Engine:81-255,Target:7;(0&1&2);3c72656c6174696f6e73686970::i;7472616e736665722e7368::i;0/<relationship(?=(?:(?!\/>).)+?targetmode\s*=\s*[\x22\x27]?\s*external)(?=(?:(?!\/>).)+?type\s*=\s*[\x22\x27][^\x22\x27\s]+\/relationships\/(?:(?:remote)?frame|oleobject|attachedtemplate\b))(?:(?!\/>).)+?target\s*=\s*[\x27\x22]?\s*https?\x3a[\/]+(?:(www\.)?transfer.sh(?:\x3a\d{1,5})?\/get\/)/si
+#https://www.youtube.com/watch?v=V2kWUJkRvVs
+TwinWave.EvilLNK.CMDLineCarrotsFoundationsOfDecay.20220516;Engine:81-255,Target:0;(0&(1|2|3|4)&5);0:4C202020011402;7c20::awi;7c09::awi;7c63::awi;7c5e::awi;(1|2|3|4)/\x7c\x00?(?!c\x00?m\x00?d\x00?(?:$|[\s\x2e\x5e]))c\x00?(?:[`^]\x00?)*m\x00?(?:[`^]\x00?)*d\x00?(?:[`^]\x00?)*(?:$|[\s\x2e\x5e])/si
+TwinWave.EvilLNK.CMDLineCarrotsFoundationsOfDecay.M2.20220516;Engine:81-255,Target:0;(0&(1|2)&3);0:4C202020011402;7365::awi;735E::awi;(1|2)/s\x00?(?!e\x00?t\x00?\s\x00?)(?:[`^]\x00?)*e\x00?(?:[`^]\x00?)*t\x00?[\s^]/si
