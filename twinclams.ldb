@@ -2655,3 +2655,5 @@ TwinWave.EvilISO.BreakOnThroughToTheOtherSide.20211020;Engine:81-255,FileSize:10
 TwinWave.EvilDoc.JustDrive.20220517;Engine:81-255,Target:2;(0&1&2);617474726962757465207662::i;736574*4765744f626a656374*43656c6c73::i;1/Set[\s_]*(?P<var>[a-zA-z][A-Za-z0-9\x2e_-]*)[\s_]*=[\s_]*GetObject[\s_]*\(Cells\(.*\b(?P=var)[\s_]*\.[\s_]*Exec\b/si
 TwinWave.EvilLNK.PKillCertUtilFoundationsOfDecay.20220517;Engine:81-255,Target:0;(0&1&2&3);0:4C??????011402;636572747574696c::iaw;2d66::iaw;2d73706c6974::iaw
 TwinWave.EvilLNK.PkillPSHELLDlAndDetonateFoundationsOfDecay.20220517;Engine:81-255,Target:0;(0&1);0:4C??????011402;2d6f757466696c65*53746172742d50726f63657373::awi
+#https://www.youtube.com/watch?v=JYIaWeVL1JM
+TwinWave.EvilLNK.RythmIsADancer.20220517;Engine:81-255,Target:0;(0&1);0:4C??????011402;11000000030000008BDD8CE81000000000
