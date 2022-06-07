@@ -2694,3 +2694,4 @@ TwinWave.EvilHTML.SEARCHMSProtoAbuseEATIT.20220606;Engine:81-255,Target:3;(0&1);
 #https://www.youtube.com/watch?v=ilnF9fmkRJk
 TwinWave.EvilPDF.MSProtoAbuseSearchMSLostBoy.20220607;Engine:81-255,Container:CL_TYPE_PDF,Target:0;(0&1);2f4a53*6c61756e636855524c*7365617263682d6d733a::i;6372756d623d6c6f636174696f6e::i
 TwinWave.EvilPDF.MSProtoAbuseMSDTMSLostBoy.20220607;Engine:81-255,Container:CL_TYPE_PDF,Target:0;(0&1);2f4a53*6c61756e636855524c*6d732d6d7364743a::i;504357446961676e6f73746963::i
+TwinWave.EvilHTML.QakySoWackySoulMan.20220607;Engine:81-255,Target:3;(0&(1|2|3|4)&5=0&6);6465636f6465555249436f6d706f6e656e74::i;6d25::i;253664::i;253464::i;6d73::i;6d732d6d7364743a::i;(1|2|3|4)/(?:\x25[46]d|m)(?:\x25[75]3|s)(?:\x252d|-)(?:\x25[46]d|m)(?:\x25[75]3|s)(?:\x25[64]4|d)(?:\x25[75]4|t)(?:\x253a|\x3a)/si
