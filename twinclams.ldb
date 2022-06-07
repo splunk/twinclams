@@ -2690,4 +2690,7 @@ TwinWave.EvilCAB.OOOHCantYouSee.20220603;Engine:81-255,Container:CL_TYPE_MSCAB,T
 #https://www.youtube.com/watch?v=CVsLEI-hCXw
 TwinWave.EvilDoc.RevB64LongTrainRunnin.20220606;Engine:81-255,Target:2;(0&1);6174747269627574652076625f*5772497445*53747252657665727365::i;0/\.[\s_]*write(?:line)?[\s_]*StrReverse[\s_]*\([\s_]*\x22[A-Za-z0-9+/]{80,}={0,2}\x22/si
 #https://www.youtube.com/watch?v=ZcJjMnHoIBI
-TwinWave.EvilHTML.SEARCHMSProtoAbuseEATIT.20220606;Engine:81-255,Target:3;(0&1);(20|09|0d|0a|2e)68726566*7365617263682d6d73*71756572793d*6372756d623d*6c6f636174696f6e::i;0/href\s*=\s*\x22\s*search-ms\x3a(?=(?:[^\x22]+&(?:amp\x3b)?)?crumb=(?:location\:shell\x253aDownloads|\x255c\x255c))(?=(?:[^\x22]+&(?:amp\x3b)?)?query=)(?:[^\x22]+&(?:amp\x3b)?)?displayname=/si
+TwinWave.EvilHTML.SEARCHMSProtoAbuseEATIT.20220606;Engine:81-255,Target:3;(0&1);(20|09|0d|0a|2e)68726566*7365617263682d6d73*71756572793d*6372756d623d*6c6f636174696f6e::i;0/href\s*=\s*\x22\s*search-ms\x3a(?=(?:[^\x22]+&(?:amp\x3b)?)?crumb=location\:(?:shell\x253aDownloads|\x255c\x255c))(?=(?:[^\x22]+&(?:amp\x3b)?)?query=)(?:[^\x22]+&(?:amp\x3b)?)?displayname=/si
+#https://www.youtube.com/watch?v=ilnF9fmkRJk
+TwinWave.EvilPDF.MSProtoAbuseSearchMSLostBoy.20220607;Engine:81-255,Container:CL_TYPE_PDF,Target:0;(0&1);2f4a53*6c61756e636855524c*7365617263682d6d733a::i;6372756d623d6c6f636174696f6e::i
+TwinWave.EvilPDF.MSProtoAbuseMSDTMSLostBoy.20220607;Engine:81-255,Container:CL_TYPE_PDF,Target:0;(0&1);2f4a53*6c61756e636855524c*6d732d6d7364743a::i;504357446961676e6f73746963::i
