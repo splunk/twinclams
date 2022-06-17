@@ -2708,3 +2708,5 @@ TwinWave.EvilLNK.BrightLights.20220610;Engine:81-255,Target:0;((0|1|2|3|4|5|6|7|
 TwinWave.EvilDoc.GOBlackKnight.20220613;Engine:81-255,Container:CL_TYPE_MSOLE2,Target:0;(0&1&2);6174747269627574652076625f::i;4765744f626a656374*456e7669726f6e6d656e74::i;1/GetObject[\s_]*\(+[\s_]*[A-Za-z][A-Za-z0-9\x2e_-]*\((?:[^\r\n]*?(?: _\s*\n)*?)*?\)+[\s_]*\.[\s_]*Environment\b/si
 TwinWave.EvilISO.RunningOutOfTime.20220616;Engine:81-255,FileSize:20000-800000,Target:0;((0|1)&(2|3|4|5));434430303101;424541303101;2e7064662e657865::iaw;2e7064662e736372::iaw;2e7064662e6a73::iaw;2e7064662e766273::iaw
 TwinWave.EvilLNK.BrightLights.20220616;Engine:81-255,Target:0;(0&1&2&(3|4));4C0000000114020000000000C000000000000046{37}000000(01|03|07)000000;7265677376723332::iaw;20262620::iaw;6375726c::iaw;70696e67::iaw
+#https://www.youtube.com/watch?v=f4BJCFYLqlY
+TwinWave.EvilHTML.PKillDlZipITDistantCitylights.202200617;Engine:81-255,Target:3;((0|1)&2&3);6372656174656f626a65637475726c*2e646f776e6c6f6164*2e636c69636b::i;6d73736176656f726f70656e626c6f62::i;76617220{0-10}3d227565736462::i;2/var.{0,10}="uesdb[a-z0-9_+\x2f\x5c]{200}/si
