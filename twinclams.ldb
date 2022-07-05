@@ -2741,3 +2741,5 @@ TwinWave.EvilLNK.MachineHead.desktop-i8bn9qk;Engine:81-255,Target:0;(0);4C000000
 TwinWave.EvilLNK.MachineHead.desktop-5f58f91;Engine:81-255,Target:0;(0);4C0000000114020000000000C000000000000046{40}(01|03|07)000000*6465736b746f702d3566353866393100
 #https://www.youtube.com/watch?v=-0CSb6dWt3U
 TwinWave.EvilDoc.TouchTheSky.20220505;Engine:81-255,Container:CL_TYPE_MSOLE2,Target:0;(0&1&(2|3|4|5)&6);6174747269627574652076625f::i;536176654173::i;45786563::i;7368656c6c::i;637265617465::i;72756e::i;1/SaveAs[\s_]*\(+[\s_]*(?P<path>[A-Z-a-z][A-Za-z0-9\x2e_$-]*)[\s_]*\)[\s_]*.*?(?:\.[\s]*(?:run|exec|create)|\bshell(?:execute)?)[^\r\n]*?\b(?P=path)(?:\s|\b)/si
+#https://www.youtube.com/watch?v=KRg-CcP-YHU
+TwinWave.EvilDoc.PlayItOnTheRadio.20220505;Engine:81-255,Target:0;((0|1)&2);6174747269627574652076625f::i;5C564245(37|36)2E444C4C::awi;72756e646c6c3332*5348454c4c33322e444c4c*5368656c6c457865635f52756e444c4c::awi
