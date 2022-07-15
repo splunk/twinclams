@@ -2767,3 +2767,5 @@ TwinWave.EvilDoc.XLM4.BooksOfWar.20220713;Engine:81-255,Target:2;(0&1&(2|3));3d5
 TwinWave.EvilDoc.JasonIdontKnowWhatYourChasin.20220714;Engine:81-255,Container:CL_TYPE_MSOLE2,Target:0;(0&1&(2|3|4|5|6)&7);6174747269627574652076625f::i;2e436f707948657265*2e6974656d73::i;5368656c6c*7265706c616365::i;2e65786563*7265706c616365::i;2e637265617465*7265706c616365::i;2e72756e*7265706c616365::i;2e205f*7265706c616365::i;(2|3|4|5|6)/(?:Shell(?:Execute)?|\.[\s_]*(?:exec|run|create))\b[^\r\n]*\breplace[\s_]*\(/si
 #https://www.youtube.com/watch?v=A9eQ0DaHCec
 TwinWave.EvilXLL.HoldMeThrillMeKissMeKillMe.20220714;Engine:81-255,Target:1;(0&1&2);786c4175746f4f70656e::iaw;666561726d65::iaw;6c6f76656d65::iaw
+#https://www.youtube.com/watch?v=8Ir-zFC9nFE
+TwinWave.EvilDoc.AMSIBypassMathematics.20220715;Engine:81-255,Container:CL_TYPE_MSOLE2,Target:0;(0&1&2);6174747269627574652076625f::i;726567::i;4d6163726f52756e74696d655363616e53636f7065::i
