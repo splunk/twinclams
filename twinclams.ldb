@@ -3383,3 +3383,5 @@ TwinWave.EvilDoc.FailToLoadPicturesOfU.PDF.230807;Engine:81-255,Container:CL_TYP
 TwinWave.EvilDoc.RoomService.20230808;Engine:81-255,Target:0;(0&1&2);0:7B5C7274;506c65617365::i;1/please\s*(?:click|select)\s*(?:on|the)?[\s\x28\x22\x27]*Enable\s*editing[\s\x29\x22\x27]*(?:button)?\s*from\s*the\s*yellow\s*bar/si
 # https://www.youtube.com/watch?v=uY4cVhXxW64
 TwinWave.EvilZip.JustAnIllusion.HTA.20230807;Engine:81-255,FileSize:64-65536,Target:0;0&1&2;0:504b0304;504b0506{18-}3c4854413a4150504c49434154494f4e::i;1/PK\x05\x06.{18}\s*(?i)(?:<HTML>\s*)?(?:<HEAD>\s*)?(?:<(?P<Tag>\S+)[^>]*>[^<]*<\x2f(?P=Tag)>)*\s*<HTA:APPLICATION/s
+TwinWave.EvilDoc.TastesLikeVenomPicturesOfU.MSOLE2.230821;Engine:81-255,Target:2;(0);49444154785eecbd05805ec791ae7dffbb77379bdd4d361bda801db31ddb31333383c00c922dcb2833338b99999999999999c96266b0e4d45f4ff5e96fce8c46b6244bf248ae4e5ecf68e69b731aaaababdeaeae
+TwinWave.EvilDoc.TastesLikeVenomPicturesOfU.WORD.230821;Engine:81-255,Container:CL_TYPE_OOXML_WORD,Target:5;(0);49444154785eecbd05805ec791ae7dffbb77379bdd4d361bda801db31ddb31333383c00c922dcb2833338b99999999999999c96266b0e4d45f4ff5e96fce8c46b6244bf248ae4e5ecf68e69b731aaaababdeaeae
