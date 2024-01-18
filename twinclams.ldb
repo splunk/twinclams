@@ -3469,3 +3469,5 @@ TwinWave.EvilDoc.PicturesThatYouLeftBehind.20240109;Engine:81-255,Target:7;0&1&2
 TwinWave.EvilLNK.PkillEasyPshellDLAndDetonate.20240116;Engine:81-255,Target:0;(0&1&2&3);4C0000000114020000000000C000000000000046{40}(00|01|02|03|04|05|06|07|08|09|0a)000000::i;706f7765727368656c6c::awi;2e446f776e6c6f616446696c65::awi;73746172742d70726f63657373::awi
 #https://www.youtube.com/watch?v=7wvLqpWtTUU
 TwinWave.EvilSVG.PkillExecPrimerLostBoy.20230116;Engine:81-255,Target:0;(0&1);3c737667*4344415441*6e6577*416374697665584f626a656374*3c2f7363726970743e*3c2f7376673e::i;0/<svg(?:(?!\/svg>).)*?<script(?=(?:(?!\/script>).)*?(?:\.(?:create|run|exec)|Shell(?:Execute)?|Execute))\b(?:(?!\/script>).)*?new\s*ActivexObject(?:(?!\/script>).)*?<\/script>.*?<\/svg>/si
+#https://www.youtube.com/watch?v=kmpyfDF_pes
+TwinWave.EvilLNK.PipesTinyMovesYouMake.20230118;Engine:81-255,Target:0;(0&1&2);0:4C0000000114020000000000C000000000000046{40}(00|01|02|03|04|05|06|07|08|09|0a)000000;6763*3a746d70*706f7765727368656c6c::iaw;1/g\x00?c\x00?.*?\$\x00?e\x00?n\x00?v\x00?\x3a\x00?t\x00?m\x00?p.*?\|\x00?(?:\s\x00?)*?p\x00?o\x00?w\x00?e\x00?r\x00?s\x00?h\x00?e\x00?l\x00?l/si
