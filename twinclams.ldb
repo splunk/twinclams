@@ -3546,4 +3546,4 @@ TwinWave.EvilLNK.CerealKiller.dc2f25c3;Engine:81-255,Target:0;(0);4C000000011402
 TwinWave.EvilLNK.MachineHead.win-9dvamkigfgl;Engine:81-255,Target:0;(0);4C0000000114020000000000C000000000000046{40}(00|01|02|03|04|05|06|07|08|09|0a)000000*77696e2d396476616d6b696766676c00
 TwinWave.EvilLNK.ReturnOfTheMac.c27cea8104ed;Engine:81-255,Target:0;(0);4C0000000114020000000000C000000000000046{40}(00|01|02|03|04|05|06|07|08|09|0a)000000*c27cea8104ed{26}c27cea8104ed
 # https://www.youtube.com/watch?v=haEqhj76z3I
-TwinWave.EvilShortcut.ImpossibleTracks_CVE-2023-35628.20240503;Engine:81-255,Target:7;0&1;5b496e7465726e657453686f72746375745d*55524c3d*66696c653a::i;0/\x5bInternetShortcut\x5d.*?\bURL\s*=\s*[\x22\x27]?file\x3a[\x2f\x5c][\x2f\x5c]+[\x2e\x3f][\x2f\x5c]+UNC[\x2f\x5c]+[A-Z]\x3a[\x2f\x5c]/si
+TwinWave.EvilShortcut.ImpossibleTracks_CVE-2023-35628.20240503;Engine:81-255,Target:7;0&1;5b496e7465726e657453686f72746375745d*55524c3d*66696c653a*554e43::i;0/\x5bInternetShortcut\x5d.*?\bURL\s*=\s*[\x22\x27]?file\x3a[\x2f\x5c][\x2f\x5c]+[\x2e\x3f][\x2f\x5c]+UNC[\x2f\x5c]+(?:[A-Z]\x3a|Volume\x7b[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\x7d)[\x2f\x5c]/si
