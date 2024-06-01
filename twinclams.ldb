@@ -3569,4 +3569,4 @@ TwinWave.EvilLNK.HotMetalDobermans.20240516;Engine:81-255,Target:0;0&(2|4);0:4c0
 #https://www.youtube.com/watch?v=t7bQwwqW-Hc
 TwinWave.EvilLNK.ABarSong.20240528;Engine:81-255,Target:0;(0&1);0:4C0000000114020000000000C000000000000046{40}(00|01|02|03|04|05|06|07|08|09|0a)000000;5c572a5c532a325c6d::awi
 #https://www.youtube.com/watch?v=k8-xws9hyMI
-TwinWave.EvilMSC.RockCO.20250531;Engine:81-255,Target:7;(0&1&2&3&4);0,1:3c3f786d6c::i;3c436f6e736f6c655461736b506164::i;3c5461736b73::i;3c436f6d6d616e644c696e65::i;1/<ConsoleTaskPad(?(?!<\/ConsoleTaskPad>).)*?<CommandLine(?(?!<\/ConsoleTaskPad>).)*?Params\s*=\s*(?P<q>[\x22\x27])(?(?!(?P=q)).)*?(?:CreateObject|GetObject|New\\s*ActiveX)/si
+TwinWave.EvilMSC.RockCO.20250531;Engine:81-255,Target:7;(0&1&2&3&4);0,1:3c3f786d6c::i;3c436f6e736f6c655461736b506164::i;3c5461736b73::i;3c436f6d6d616e644c696e65::i;1/<ConsoleTaskPad(?(?!<\/ConsoleTaskPad>).)*?<CommandLine(?(?!<\/ConsoleTaskPad>).)*?Params\s*=\s*(?P<q>[\x22\x27])(?(?!(?P=q)).)*?(?:CreateObject|GetObject|New\\s*ActiveX|new-object\s*-comobject)/si
