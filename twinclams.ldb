@@ -3655,3 +3655,5 @@ TwinWave.EvilSearchConnectorMS.PkillPublicDottedQuadCIYH.20241210;Engine:81-255,
 TwinWave.EvilMSBuild.DeliriousWhenYouBuildMyCode.20250217;Engine:81-255,Target:7;0&1&2&3;3c50726f6a656374{1-512}687474703a2f2f736368656d61732e6d6963726f736f66742e636f6d2f646576656c6f7065722f6d736275696c642f::i;53797374656d2e5265666c656374696f6e::i;627974655b5d::i;2/=\s*new\s+byte\x5b\x5d\s*\x7b(?:\s*[0-9]{1,5}\s*,){1024}/i
 # https://www.youtube.com/watch?v=T6eK-2OQtew
 TwinWave.EvilSearchConnectorMS.PkillCrimeFlareNotLikeUS.20250220;Engine:81-255,Target:7;(0&1);0,1:3c3f786d6c*3c73696d706c654c6f636174696f6e*3c75726c*3c2f75726c*3c2f73696d706c654c6f636174696f6e::i;0/<simpleLocation(?:(?!(?:<\/simplelocation)).)*?<url(?:(?!(?:<\/url)).)*?[\x2f\x5c]+[^\x2f\x5c\r\n]+\.trycloudflare\.com(?:\@SSL)?(?:\@[0-9]{1,5})?[\x2f\x5c]/si
+# https://www.youtube.com/watch?v=8HqyEHqEYho
+TwinWave.EvilJS.NothingFromNothing.20250305;Engine:81-255,Target:7;0>1024&(1|2|3)>256,2;212b5b5d2b212b5b5d2b212b5b5d2b212b5b5d;28(49|69)6e66696e6974792b5b5d29;28(4e|6e)61(4e|6e)2b5b5d29;28312f302b5b5d29
