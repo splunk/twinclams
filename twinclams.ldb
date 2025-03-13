@@ -3657,3 +3657,7 @@ TwinWave.EvilMSBuild.DeliriousWhenYouBuildMyCode.20250217;Engine:81-255,Target:7
 TwinWave.EvilSearchConnectorMS.PkillCrimeFlareNotLikeUS.20250220;Engine:81-255,Target:7;(0&1);0,1:3c3f786d6c*3c73696d706c654c6f636174696f6e*3c75726c*3c2f75726c*3c2f73696d706c654c6f636174696f6e::i;0/<simpleLocation(?:(?!(?:<\/simplelocation)).)*?<url(?:(?!(?:<\/url)).)*?[\x2f\x5c]+[^\x2f\x5c\r\n]+\.trycloudflare\.com(?:\@SSL)?(?:\@[0-9]{1,5})?[\x2f\x5c]/si
 #https://www.youtube.com/watch?v=7xzU9Qqdqww
 TwinWave.EvilPPKG.PkillPursuitOfHappiness.20250312;Engine:81-255,Target:0;(0&1&2);0:4d5357494d::i;3c50726f766973696f6e696e67436f6d6d616e6473*3c436f6d6d616e644c696e65::i;1/<ProvisioningCommands(?:(?!(?:<\/ProvisioningCommands)).)*?<CommandLine(?:(?!(?:<\/CommandLine)).)*?\b(?:(?:(?:c(?:mstp|o(?:mspec|nhost)|ertutil|script)|ms(?:build|excel|iexec|hta|dt)|sc(?:riptrunner|htasks)|w(?:script|mic)|r(?:egsvr|undll)32|powershell|bitsadmin|forfiles|expand|pcalua)(?:\.exe)?)|I(?:nvoke-)?W(?:eb)?R(?:equest)?\b|I(?:nvoke-)?R(?:est)?M(?:ethod)?\b|I(?:nvoke-)?Ex(?:pression)?\b|start-process\b|saps\b|[A-Za-z0-9\x2e-]*[`^][A-Za-z0-9\x2e-]|wget|curl|useb)/si
+# https://www.youtube.com/watch?v=8HqyEHqEYho
+TwinWave.EvilJS.NothingFromNothing.20250305;Engine:81-255,Target:7;0>1024&(1|2|3)>256,2;212b5b5d2b212b5b5d2b212b5b5d2b212b5b5d;28(49|69)6e66696e6974792b5b5d29;28(4e|6e)61(4e|6e)2b5b5d29;28312f302b5b5d29
+# https://www.youtube.com/watch?v=-QlIs-fT8Mc
+TwinWave.EvilPDF.TheLostArtOfKeepingASecret.20250311;Engine:81-255,Target:0;0;0:255044462d*2525454f46504b0304*504b0506
