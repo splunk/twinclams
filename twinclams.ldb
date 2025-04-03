@@ -3660,6 +3660,7 @@ TwinWave.EvilPPKG.PkillPursuitOfHappiness.20250312;Engine:81-255,Target:0;(0&1&2
 # https://www.youtube.com/watch?v=8HqyEHqEYho
 TwinWave.EvilJS.NothingFromNothing.20250305;Engine:81-255,Target:7;0>1024&(1|2|3)>256,2;212b5b5d2b212b5b5d2b212b5b5d2b212b5b5d;28(49|69)6e66696e6974792b5b5d29;28(4e|6e)61(4e|6e)2b5b5d29;28312f302b5b5d29
 TwinWave.EvilJS.NothingFromNothing.20250402;Engine:81-255,Target:7;0>1024&1>8;2720272b2720272b2720272b272027;3d28(5b5d|215b5d|21215b5d|2b5b215b5d5d|5b5d5b5b5d5d|312f30)2b(5b5d|7b7d)295b(30|31|32|33|34|35|36|37|38|39)5d(2b|3b)
+TwinWave.EvilJS.NothingFromNothing.20250403;Engine:81-255,Target:7;0>128&1>1024;285b5d2b5b(49|69)6e66696e6974795d5b2b5b5d5d295b(30|31|32|33|34|35|36|37|38|39)5d;285b5d5b22{2-16}225d2b5b5d295b(30|31|32|33|34|35|36|37|38|39)5d
 # https://www.youtube.com/watch?v=-QlIs-fT8Mc
 TwinWave.EvilPDF.TheLostArtOfKeepingASecret.20250311;Engine:81-255,Target:0;0;0:255044462d*2525454f46504b0304*504b0506
 #https://www.youtube.com/watch?v=_iYRlPu4ttY
