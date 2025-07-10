@@ -3696,3 +3696,7 @@ TwinWave.EvilSVG.ToBeYoung.20250708;Engine:81-255,Target:0;(0&1&2);3c737667*3c21
 TwinWave.EvilSVG.ThatsTheWay.20250708;Engine:81-255,Target:0;(0&1&2&3);3c737667*3c215b43444154415b::iaw;5061727365496e74::iaw;77696e646f772e6c6f636174696f6e2e68726566::iaw;0/<svg.*?CDATA(?:(?!(?:\s*]\s*]\s*>)).)*?\.\s*fromCharCode\s*\(\s*parseInt\s*\(/si
 #https://www.youtube.com/watch?v=1WusfE2M5KU
 TwinWave.EvilSVG.FireInTheTwilight.20250708;Engine:81-255,Target:0;(0|1|2);3c737667*4344415441*64326c755a4739334c6d78765932463061573975*3c2f7376673e::i;3c737667*4344415441*6470626d52766479357362324e6864476c7662*3c2f7376673e::i;3c737667*4344415441*336157356b623363756247396a595852706232*3c2f7376673e::i
+# https://www.youtube.com/watch?v=1SWg0BZkQps
+TwinWave.EvilSVG.StuffLikeThat.20250710;Engine:81-255,FileSize:8388608-268435456,Target:0;0&1;0,32:3c737667::i;3c212d2d204578747261446174613a::i
+# https://www.youtube.com/watch?v=gORKiQ0h1ZA
+TwinWave.EvilSVG.OutTaGetMe.20250710;Engine:81-255,Target:3;0&1&2;0,32:3c737667::i;3c696d616765{2-64}3d223130302522*3c61{0-32}687265663d2268747470*3c72656374{2-64}66696c6c3d227472616e73706172656e7422::i;1/<image\s(?:[^>]*\b(?:width|height)="100%"){2}[^>]*>\s*<a\s[^>]*\bhref="https?:[^"]+"[^>]*>\s*<rect\s(?:[^>]*\b(?:(?:width|height)="100%"|fill="transparent")){3}[^>]*>/i
