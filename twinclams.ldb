@@ -3702,5 +3702,7 @@ TwinWave.EvilLNK.TheManInMe.20250710;Engine:81-255,Target:0;(0&1);4C000000011402
 TwinWave.EvilSVG.StuffLikeThat.20250710;Engine:81-255,FileSize:8388608-268435456,Target:0;0&1;0,32:3c737667::i;3c212d2d204578747261446174613a::i
 # https://www.youtube.com/watch?v=gORKiQ0h1ZA
 TwinWave.EvilSVG.OutTaGetMe.20250710;Engine:81-255,Target:3;0&1&2;0,32:3c737667::i;3c696d616765{2-64}3d223130302522*3c61{0-32}687265663d2268747470*3c72656374{2-64}66696c6c3d227472616e73706172656e7422::i;1/<image\s(?:[^>]*\b(?:width|height)="100%"){2}[^>]*>\s*<a\s[^>]*\bhref="https?:[^"]+"[^>]*>\s*<rect\s(?:[^>]*\b(?:(?:width|height)="100%"|fill="transparent")){3}[^>]*>/i
-#https://www.youtube.com/watch?v=lcDZYphg_WI&list=RDlcDZYphg_WI
+#https://www.youtube.com/watch?v=lcDZYphg_WI
 TwinWave.EvilSVG.RemoteJSTwoHearts.20250716;Engine:81-255,Target:0;(0&1);3c737667*3c666f726569676e4f626a656374*31303025*3c736372697074*737263*68747470*3c2f666f726569676e4f626a656374::i;0/<svg(?:(?!\/svg>).)*?<foreignObject(?=[^>]*width\s*=\s*[\x22\x27]*100\x25)(?=[^>]*height\s*=\s*[\x22\x27]*100\x25)[^>]+>(?:(?!<\/foreignObject).)*?<script[^>]*src\s*=\s*[\x22\x27`]*https?:/si
+#https://www.youtube.com/watch?v=-Sj-FmI5JfA
+TwinWave.EvilSVG.AsAliveAsUNeedMe2Be.20250718;Engine:81-255,Target:3;(0&1);3c737667*3c666f726569676e4f626a656374*3c736372697074*737263*3c2f666f726569676e4f626a656374::i;0/<svg(?:(?!\/svg>).)*?<foreignObject(?=[^>]*overflow\s*=\s*[\x22\x27]hidden[\x22\x27])(?=[^>]*\by\s*=\s*[\x22\x27]0[\x22\x27])(?=[^>]*\bx\s*=\s*[\x22\x27]0[\x22\x27])(?=[^>]*width\s*=\s*[\x22\x27]0(?:px)?[\x22\x27])(?=[^>]*height\s*=\s*[\x22\x27]0(?:px)?[\x22\x27])[^>]+>(?:(?!<\/foreignObject).)*?(?:<script[^>]*src\s*=|(?:aHR0c(:HM6|D)|h0dH(?:A6|BzO)|odHRw(?:O|cz)))/si
