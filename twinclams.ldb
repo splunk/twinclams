@@ -2560,9 +2560,9 @@ TwinWave.LoveOnARealTrainLNK.20220426;Engine:81-255,Target:0;((((0|1)&2)|3)&4&5)
 TwinWave.EncryptedLNKZipHuer.20220427;Engine:81-255,FileSize:1000-3000,Target:0;(0&1);0:504b03043300(03|01)006300;0/^\x50\x4B\x03\x04\x33\x00[\x01\x03]\x00\x63\x00.{8}(?P<uncomp>[^\x00]{2}\x00\x00)(?P<comp>[^\x00]{2}\x00\x00).{4}(?P<filename>[\p{L}\p{N}\s\x2f\x5c_.~-]{0,256}\.lnk).{0,5000}\x50\x4b\x01\x02.{16}(?P=uncomp)(?P=comp).{18}(?P=filename).{11}\x50\x4b\x05\x06/si
 #https://www.youtube.com/watch?v=Z_0uJ8DWnU0
 TwinWave.EvilDoc.PKILLOOXMLRelsGitHubWindBelow.20220427;Engine:81-255,Target:7;(0&1&2);3c72656c6174696f6e73686970::i;676974687562::i;0/<relationship(?=(?:(?!\/>).)+?targetmode\s*=\s*[\x22\x27]?\s*external)(?=(?:(?!\/>).)+?type\s*=\s*[\x22\x27][^\x22\x27\s]+\/relationships\/(?:(?:remote)?frame|oleobject|attachedtemplate\b))(?:(?!\/>).)+?target\s*=\s*[\x27\x22]?\s*https?\x3a[\/]+(?:(?:(?:www|gist)\.)?github(?:usercontent)?\.com[^\x22\x27]*(?:\?raw=true|\/raw\/)|raw\.githubusercontent\.com(?:\x3a\d{1,5})?\/)/si
-TwinWave.Encoder.Javascript_Obfuscator_Usage_Observed_M1.20220427;Engine:81-255,Target:3;(0&1&2&3&4);7661725F3078::i;0/[a-f0-9]+/i;5F3078::i;5F3078::i;5F3078::i
-TwinWave.Encoder.Javascript_Obfuscator_Usage_Observed_M2.20220427;Engine:81-255,Target:3;(0&1&2&3&4);66756E6374696F6E5F3078::i;0/[a-f0-9]+/i;5F3078::i;5F3078::i;5F3078::i
-TwinWave.Encoder.Javascript_Obfuscator_Usage_Observed_M3.20220427;Engine:81-255,Target:3;(0&1&2&3&4);72657475726E5F3078::i;0/[a-f0-9]+/i;5F3078::i;5F3078::i;5F3078::i
+TwinWave.Encoder.Javascript_Obfuscator_Usage_Observed_M1.20220427;Engine:81-255,Target:3;0&1&2>2;7661725F3078::i;0/var_0x[a-f0-9]{2}/i;5F3078::i
+TwinWave.Encoder.Javascript_Obfuscator_Usage_Observed_M2.20220427;Engine:81-255,Target:3;0&1&2>2;66756E6374696F6E5F3078::i;0/function_0x[a-f0-9]{2}/i;5F3078::i
+TwinWave.Encoder.Javascript_Obfuscator_Usage_Observed_M3.20220427;Engine:81-255,Target:3;0&1&2>2;72657475726E5F3078::i;0/return_0x[a-f0-9]{2}/i;5F3078::i
 #https://www.youtube.com/watch?v=IYaGHdpP05g
 TwinWave.LNKPShellMotherBoardFire.20220428;Engine:81-255,Target:0;(0&1&2);0:4C000000011402;7000::ai;1/p\x00(?!o\x00w\x00e\x00r\x00s\x00h\x00e\x00l\x00l)(?:[`^]\x00)*o\x00(?:[`^]\x00)*w\x00(?:[`^]\x00)*e\x00(?:[`^]\x00)*r\x00(?:[`^]\x00)*s\x00(?:[`^]\x00)*h\x00(?:[`^]\x00)*e\x00(?:[`^]\x00)*l\x00(?:[`^]\x00)*l/si
 TwinWave.EvilLNK.DOCXRSTRGOOD.REGSVR32.220428B64.1;Engine:81-255,Target:0;0&1&2;0:4C000000011402;636b::aw;1/c\x00?k\x00?V\x00?[Hn]\x00?[Uc]\x00?[13]\x00?Z\x00?[Sy]\x00?M\x00?z/
